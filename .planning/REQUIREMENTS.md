@@ -120,23 +120,66 @@ Which phases cover which requirements. Updated during roadmap creation.
 
 | Requirement | Phase | Status |
 |-------------|-------|--------|
-| SCAF-01 through SCAF-06 | Phase 1 | Pending |
-| NAV-01 through NAV-05 | Phase 2 | Pending |
-| HERO-01 through HERO-06 | Phase 2 | Pending |
-| ABOUT-01 through ABOUT-03 | Phase 3 | Pending |
-| EXP-01 through EXP-06 | Phase 3 | Pending |
-| SKILL-01 through SKILL-05 | Phase 3 | Pending |
-| EDU-01 through EDU-04 | Phase 4 | Pending |
-| CONT-01 through CONT-05 | Phase 4 | Pending |
-| FOOT-01 through FOOT-02 | Phase 4 | Pending |
-| DSGN-01 through DSGN-06 | All phases | Pending |
-| QUAL-01 through QUAL-06 | Phase 5 | Pending |
+| SCAF-01 | Phase 1 — Foundation | Pending |
+| SCAF-02 | Phase 1 — Foundation | Pending |
+| SCAF-03 | Phase 1 — Foundation | Pending |
+| SCAF-04 | Phase 1 — Foundation | Pending |
+| SCAF-05 | Phase 1 — Foundation | Pending |
+| SCAF-06 | Phase 1 — Foundation | Pending |
+| NAV-01 | Phase 2 — Hero + Navigation | Pending |
+| NAV-02 | Phase 2 — Hero + Navigation | Pending |
+| NAV-03 | Phase 2 — Hero + Navigation | Pending |
+| NAV-04 | Phase 2 — Hero + Navigation | Pending |
+| NAV-05 | Phase 2 — Hero + Navigation | Pending |
+| HERO-01 | Phase 2 — Hero + Navigation | Pending |
+| HERO-02 | Phase 2 — Hero + Navigation | Pending |
+| HERO-03 | Phase 2 — Hero + Navigation | Pending |
+| HERO-04 | Phase 2 — Hero + Navigation | Pending |
+| HERO-05 | Phase 2 — Hero + Navigation | Pending |
+| HERO-06 | Phase 2 — Hero + Navigation | Pending |
+| ABOUT-01 | Phase 3 — Content Sections | Pending |
+| ABOUT-02 | Phase 3 — Content Sections | Pending |
+| ABOUT-03 | Phase 3 — Content Sections | Pending |
+| EXP-01 | Phase 3 — Content Sections | Pending |
+| EXP-02 | Phase 3 — Content Sections | Pending |
+| EXP-03 | Phase 3 — Content Sections | Pending |
+| EXP-04 | Phase 3 — Content Sections | Pending |
+| EXP-05 | Phase 3 — Content Sections | Pending |
+| EXP-06 | Phase 3 — Content Sections | Pending |
+| SKILL-01 | Phase 3 — Content Sections | Pending |
+| SKILL-02 | Phase 3 — Content Sections | Pending |
+| SKILL-03 | Phase 3 — Content Sections | Pending |
+| SKILL-04 | Phase 3 — Content Sections | Pending |
+| SKILL-05 | Phase 3 — Content Sections | Pending |
+| EDU-01 | Phase 4 — Closing Sections | Pending |
+| EDU-02 | Phase 4 — Closing Sections | Pending |
+| EDU-03 | Phase 4 — Closing Sections | Pending |
+| EDU-04 | Phase 4 — Closing Sections | Pending |
+| CONT-01 | Phase 4 — Closing Sections | Pending |
+| CONT-02 | Phase 4 — Closing Sections | Pending |
+| CONT-03 | Phase 4 — Closing Sections | Pending |
+| CONT-04 | Phase 4 — Closing Sections | Pending |
+| CONT-05 | Phase 4 — Closing Sections | Pending |
+| FOOT-01 | Phase 4 — Closing Sections | Pending |
+| FOOT-02 | Phase 4 — Closing Sections | Pending |
+| DSGN-01 | Phase 5 — Polish + Deploy | Pending |
+| DSGN-02 | Phase 5 — Polish + Deploy | Pending |
+| DSGN-03 | Phase 5 — Polish + Deploy | Pending |
+| DSGN-04 | Phase 5 — Polish + Deploy | Pending |
+| DSGN-05 | Phase 5 — Polish + Deploy | Pending |
+| DSGN-06 | Phase 5 — Polish + Deploy | Pending |
+| QUAL-01 | Phase 5 — Polish + Deploy | Pending |
+| QUAL-02 | Phase 5 — Polish + Deploy | Pending |
+| QUAL-03 | Phase 5 — Polish + Deploy | Pending |
+| QUAL-04 | Phase 5 — Polish + Deploy | Pending |
+| QUAL-05 | Phase 5 — Polish + Deploy | Pending |
+| QUAL-06 | Phase 5 — Polish + Deploy | Pending |
 
 **Coverage:**
-- v1 requirements: 41 total
-- Mapped to phases: 41
-- Unmapped: 0 ✓
+- v1 requirements: 53 total
+- Mapped to phases: 53
+- Unmapped: 0
 
 ---
 *Requirements defined: 2026-03-03*
-*Last updated: 2026-03-03 after initial definition*
+*Last updated: 2026-03-03 after roadmap creation*
