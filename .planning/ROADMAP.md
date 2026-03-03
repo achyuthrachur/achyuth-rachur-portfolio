@@ -24,7 +24,12 @@ Five phases take this from an empty directory to a live, Crowe-branded single-pa
   3. Crowe color tokens, tint scale, shadow system, and font families are available as Tailwind classes
   4. React Bits components (SplitText, BlurText, SpotlightCard, TiltedCard, Aurora, AnimatedList, GradientText, ShinyText, CountUp) are importable from the project
   5. shadcn/ui globals.css contains Crowe HSL overrides so all shadcn components use brand colors
-**Plans**: TBD
+**Plans**: 3 plans
+
+Plans:
+- [ ] 01-01-PLAN.md — Scaffold Next.js project and configure static export for Cloudflare Pages
+- [ ] 01-02-PLAN.md — Initialize shadcn/ui and write complete Crowe brand token system into globals.css
+- [ ] 01-03-PLAN.md — Install animation/icon packages and populate all 9 React Bits components
 
 ### Phase 2: Hero + Navigation
 **Goal**: A visitor landing on the site sees an animated hero with Achyuth's name and role, and can navigate smoothly between sections via a glassmorphism sticky nav
@@ -80,7 +85,7 @@ Phases execute in numeric order: 1 → 2 → 3 → 4 → 5
 
 | Phase | Plans Complete | Status | Completed |
 |-------|----------------|--------|-----------|
-| 1. Foundation | 0/TBD | Not started | - |
+| 1. Foundation | 0/3 | Not started | - |
 | 2. Hero + Navigation | 0/TBD | Not started | - |
 | 3. Content Sections | 0/TBD | Not started | - |
 | 4. Closing Sections | 0/TBD | Not started | - |
