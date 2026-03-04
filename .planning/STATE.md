@@ -3,14 +3,14 @@ gsd_state_version: 1.0
 milestone: v1.0
 milestone_name: milestone
 status: planning
-stopped_at: Phase 3 context gathered
-last_updated: "2026-03-04T15:09:53.595Z"
+stopped_at: Completed 03-content-sections-03-03-PLAN.md
+last_updated: "2026-03-04T15:32:00.126Z"
 last_activity: 2026-03-04 — Phase 2 (Hero + Navigation) complete, human visual verification approved
 progress:
   total_phases: 5
   completed_phases: 2
-  total_plans: 6
-  completed_plans: 6
+  total_plans: 10
+  completed_plans: 9
   percent: 100
 ---
 
@@ -56,6 +56,9 @@ Progress: [██████████] 100%
 | Phase 02-hero-navigation P01 | 2 | 1 tasks | 1 files |
 | Phase 02-hero-navigation P02 | 2 | 1 tasks | 1 files |
 | Phase 02-hero-navigation P03 | 5min | 2 tasks | 1 files |
+| Phase 03-content-sections P02 | 1min | 1 tasks | 1 files |
+| Phase 03-content-sections P01 | 5min | 1 tasks | 1 files |
+| Phase 03-content-sections P03 | 2min | 1 tasks | 1 files |
 
 ## Accumulated Context
 
@@ -86,6 +89,12 @@ Recent decisions affecting current work:
 - [Phase 02-hero-navigation]: Aurora colorStops overridden to indigo-only — removes default amber stop that clashes with hero bg
 - [Phase 02-hero-navigation]: page.tsx stays as server component — only imports client components, no use client directive needed
 - [Phase 02-hero-navigation]: scroll-mt-16 pattern: all anchor sections must carry this class to compensate for h-16 sticky nav
+- [Phase 03-content-sections]: spotlightColor rgba(245,168,0,0.08) — slightly lower than SpotlightCard default 0.12, per user preference
+- [Phase 03-content-sections]: IntersectionObserver chosen over Anime.js onScroll() for ExperienceSection — proven pattern from Nav.tsx
+- [Phase 03-content-sections]: Highlight helper component pattern: amber-wash span for key term emphasis, reusable across sections
+- [Phase 03-content-sections]: Used Framer Motion whileInView instead of Anime.js IntersectionObserver for AboutSection — cleaner declarative syntax for simple fade/slide
+- [Phase 03-content-sections]: Custom span badges (not shadcn Badge) for hover:shadow-amber-glow + hover:scale-[1.03] without variant overrides
+- [Phase 03-content-sections]: AnimatedList className=flex flex-col gap-2 — sidesteps block/inline layout conflict with motion.div wrappers
 
 ### Pending Todos
 
@@ -97,6 +106,6 @@ None yet.
 
 ## Session Continuity
 
-Last session: 2026-03-04T15:09:53.580Z
-Stopped at: Phase 3 context gathered
-Resume file: .planning/phases/03-content-sections/03-CONTEXT.md
+Last session: 2026-03-04T15:32:00.120Z
+Stopped at: Completed 03-content-sections-03-03-PLAN.md
+Resume file: None

@@ -39,12 +39,12 @@
 
 ### Experience Section
 
-- [ ] **EXP-01**: Section background #f6f7fa
-- [ ] **EXP-02**: Company heading "Crowe LLP" in Indigo Dark (#011E41); role and dates in muted (#8b90a0)
-- [ ] **EXP-03**: Each experience bullet rendered in a React Bits SpotlightCard with spotlightColor "rgba(245,168,0,0.08)"
-- [ ] **EXP-04**: Cards are borderless with crowe-card shadow (DESIGN.md Section 1.5), 12px radius
-- [ ] **EXP-05**: Key terms highlighted via ShinyText (amber shine) or span with bg-[#fff8eb] + font-semibold
-- [ ] **EXP-06**: Stagger entrance via Anime.js onScroll trigger, stagger(100) on the card group
+- [x] **EXP-01**: Section background #f6f7fa
+- [x] **EXP-02**: Company heading "Crowe LLP" in Indigo Dark (#011E41); role and dates in muted (#8b90a0)
+- [x] **EXP-03**: Each experience bullet rendered in a React Bits SpotlightCard with spotlightColor "rgba(245,168,0,0.08)"
+- [x] **EXP-04**: Cards are borderless with crowe-card shadow (DESIGN.md Section 1.5), 12px radius
+- [x] **EXP-05**: Key terms highlighted via ShinyText (amber shine) or span with bg-[#fff8eb] + font-semibold
+- [x] **EXP-06**: Stagger entrance via Anime.js onScroll trigger, stagger(100) on the card group
 
 ### Skills Section
 
@@ -140,12 +140,12 @@ Which phases cover which requirements. Updated during roadmap creation.
 | ABOUT-01 | Phase 3 — Content Sections | Pending |
 | ABOUT-02 | Phase 3 — Content Sections | Pending |
 | ABOUT-03 | Phase 3 — Content Sections | Pending |
-| EXP-01 | Phase 3 — Content Sections | Pending |
-| EXP-02 | Phase 3 — Content Sections | Pending |
-| EXP-03 | Phase 3 — Content Sections | Pending |
-| EXP-04 | Phase 3 — Content Sections | Pending |
-| EXP-05 | Phase 3 — Content Sections | Pending |
-| EXP-06 | Phase 3 — Content Sections | Pending |
+| EXP-01 | Phase 3 — Content Sections | Complete |
+| EXP-02 | Phase 3 — Content Sections | Complete |
+| EXP-03 | Phase 3 — Content Sections | Complete |
+| EXP-04 | Phase 3 — Content Sections | Complete |
+| EXP-05 | Phase 3 — Content Sections | Complete |
+| EXP-06 | Phase 3 — Content Sections | Complete |
 | SKILL-01 | Phase 3 — Content Sections | Pending |
 | SKILL-02 | Phase 3 — Content Sections | Pending |
 | SKILL-03 | Phase 3 — Content Sections | Pending |
