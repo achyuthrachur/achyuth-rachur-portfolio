@@ -5,7 +5,7 @@ import './globals.css';
 import { ThemeProvider } from '@/components/ThemeProvider';
 
 export const metadata: Metadata = {
-  title: 'Achyuth Rachur — Staff Consultant | AI Enablement & IRM',
+  title: 'Achyuth Rachur — Staff Consultant | AI & IRM',
   description:
     'Portfolio of Achyuth Rachur, Staff Consultant in AI Enablement & Integrated Risk Management at Crowe LLP.',
 };
