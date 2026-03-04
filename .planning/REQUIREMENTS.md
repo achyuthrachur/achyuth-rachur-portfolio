@@ -85,10 +85,10 @@
 
 ### Quality & Deployment
 
-- [ ] **QUAL-01**: Responsive layout verified: mobile, tablet, desktop
-- [ ] **QUAL-02**: Lighthouse score > 90 (Performance, Accessibility)
-- [ ] **QUAL-03**: No console errors in production build
-- [ ] **QUAL-04**: Static build (npm run build) outputs to /out directory without errors
+- [x] **QUAL-01**: Responsive layout verified: mobile, tablet, desktop
+- [x] **QUAL-02**: Lighthouse score > 90 (Performance, Accessibility)
+- [x] **QUAL-03**: No console errors in production build
+- [x] **QUAL-04**: Static build (npm run build) outputs to /out directory without errors
 - [ ] **QUAL-05**: GitHub repo created: achyuthrachur/[project-name], pushed
 - [ ] **QUAL-06**: Cloudflare Pages deployment configured (build cmd: npm run build, output dir: out)
 
@@ -168,10 +168,10 @@ Which phases cover which requirements. Updated during roadmap creation.
 | DSGN-04 | Phase 5 — Polish + Deploy | Complete |
 | DSGN-05 | Phase 5 — Polish + Deploy | Complete |
 | DSGN-06 | Phase 5 — Polish + Deploy | Complete |
-| QUAL-01 | Phase 5 — Polish + Deploy | Pending |
-| QUAL-02 | Phase 5 — Polish + Deploy | Pending |
-| QUAL-03 | Phase 5 — Polish + Deploy | Pending |
-| QUAL-04 | Phase 5 — Polish + Deploy | Pending |
+| QUAL-01 | Phase 5 — Polish + Deploy | Complete |
+| QUAL-02 | Phase 5 — Polish + Deploy | Complete |
+| QUAL-03 | Phase 5 — Polish + Deploy | Complete |
+| QUAL-04 | Phase 5 — Polish + Deploy | Complete |
 | QUAL-05 | Phase 5 — Polish + Deploy | Pending |
 | QUAL-06 | Phase 5 — Polish + Deploy | Pending |
 
