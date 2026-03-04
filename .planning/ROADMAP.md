@@ -75,7 +75,12 @@ Plans:
   2. The Contact section has an Indigo Dark background with a GradientText heading and four Iconsax contact icons (email, LinkedIn, GitHub, phone) that are clickable anchors
   3. Each contact icon animates to amber and scales up on hover
   4. The footer renders "© 2025 Achyuth Rachur" in muted text on Indigo Dark background
-**Plans**: TBD
+**Plans**: 3 plans
+
+Plans:
+- [ ] 04-01-PLAN.md — Build EducationSection: TiltedCard degree + two research SpotlightCards with external links
+- [ ] 04-02-PLAN.md — Build ContactSection and Footer: GradientText heading, 4 Iconsax icon anchors, copyright bar
+- [ ] 04-03-PLAN.md — Wire page.tsx: replace education/contact placeholders, run full build, human visual verification
 
 ### Phase 5: Polish + Deploy
 **Goal**: The site passes design compliance, has no console errors, scores above 90 on Lighthouse, is responsive across breakpoints, and is live on Cloudflare Pages
@@ -99,5 +104,5 @@ Phases execute in numeric order: 1 → 2 → 3 → 4 → 5
 | 1. Foundation | 3/3 | Complete    | 2026-03-04 |
 | 2. Hero + Navigation | 3/3 | Complete    | 2026-03-04 |
 | 3. Content Sections | 4/4 | Complete    | 2026-03-04 |
-| 4. Closing Sections | 0/TBD | Not started | - |
+| 4. Closing Sections | 0/3 | Not started | - |
 | 5. Polish + Deploy | 0/TBD | Not started | - |
