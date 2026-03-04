@@ -55,7 +55,7 @@ export function ExperienceSection() {
         Crowe LLP
       </h2>
       <p className="text-sm text-tint-500 dark:text-[#64748b] mt-1 mb-10 font-body">
-        Staff Consultant | Integrated Risk Management · Feb 2025 – Present
+        Staff Consultant | AI Enablement & Integrated Risk Management · Feb 2025 – Present
       </p>
 
       {/* Timeline */}

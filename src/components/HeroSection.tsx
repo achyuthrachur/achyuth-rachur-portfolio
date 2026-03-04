@@ -82,7 +82,7 @@ export function HeroSection() {
           animate={{ opacity: 1, y: 0 }}
           transition={prefersReduced ? { duration: 0 } : { delay: 0.5, duration: 0.5, ease: [0.16, 1, 0.3, 1] }}
         >
-          Staff Consultant | Integrated Risk Management
+          Staff Consultant | AI Enablement & Integrated Risk Management
         </motion.p>
 
         {/* Tagline */}

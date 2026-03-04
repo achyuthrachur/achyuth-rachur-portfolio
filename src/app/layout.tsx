@@ -5,9 +5,9 @@ import './globals.css';
 import { ThemeProvider } from '@/components/ThemeProvider';
 
 export const metadata: Metadata = {
-  title: 'Achyuth Rachur — Staff Consultant | IRM',
+  title: 'Achyuth Rachur — Staff Consultant | AI Enablement & IRM',
   description:
-    'Portfolio of Achyuth Rachur, Staff Consultant in Integrated Risk Management at Crowe LLP.',
+    'Portfolio of Achyuth Rachur, Staff Consultant in AI Enablement & Integrated Risk Management at Crowe LLP.',
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
