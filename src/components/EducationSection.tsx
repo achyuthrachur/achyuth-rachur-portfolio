@@ -22,7 +22,7 @@ const researchPapers: ResearchPaper[] = [
     title: 'Securing the Future: Legal Strategies for AI Implementation in Business Operations',
     publication: 'Eurasia Business and Economics Society',
     date: 'April 2024',
-    url: 'https://drive.google.com/file/d/1nbN3ES_DH7tnr9bP7ZrtQL1FWUtrNiaC/view?pli=1',
+    url: '/Securing_the_Future.pdf',
   },
 ];
 
