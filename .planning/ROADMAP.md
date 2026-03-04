@@ -58,7 +58,13 @@ Plans:
   3. Key terms in experience bullets are visually highlighted (ShinyText or amber-wash span)
   4. The Skills section renders four category groups in a 2-column grid with badge pills that hover with an amber glow effect
   5. Badge pills and skill groups stagger into view on scroll via AnimatedList or Anime.js
-**Plans**: TBD
+**Plans**: 4 plans
+
+Plans:
+- [ ] 03-01-PLAN.md — Build AboutSection component: Framer Motion whileInView scroll reveal, heading + amber underline, first-person prose
+- [ ] 03-02-PLAN.md — Build ExperienceSection component: 6 SpotlightCards, amber-wash key term spans, IntersectionObserver stagger
+- [ ] 03-03-PLAN.md — Build SkillsSection component: 4 AnimatedList badge groups in 2-col responsive grid, custom white pill badges
+- [ ] 03-04-PLAN.md — Wire page.tsx: import 3 new components, replace placeholders, run full build, human visual verification
 
 ### Phase 4: Closing Sections
 **Goal**: The page is complete end-to-end — a visitor can see Education, reach Achyuth via Contact icons, and see the footer
@@ -92,6 +98,6 @@ Phases execute in numeric order: 1 → 2 → 3 → 4 → 5
 |-------|----------------|--------|-----------|
 | 1. Foundation | 3/3 | Complete    | 2026-03-04 |
 | 2. Hero + Navigation | 3/3 | Complete    | 2026-03-04 |
-| 3. Content Sections | 0/TBD | Not started | - |
+| 3. Content Sections | 0/4 | Not started | - |
 | 4. Closing Sections | 0/TBD | Not started | - |
 | 5. Polish + Deploy | 0/TBD | Not started | - |
