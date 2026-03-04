@@ -28,7 +28,7 @@ export function AboutSection() {
         <p className="text-lg text-tint-700 leading-relaxed max-w-2xl font-body">
           I work at the intersection of AI and financial services risk — helping institutions
           design, govern, and validate AI systems that regulators and internal stakeholders
-          can trust. At Crowe, I&apos;ve led engagements where the goal wasn&apos;t just to ship a
+          can trust. At Crowe, I lead engagements where the goal isn&apos;t just to ship a
           model, but to build the controls, documentation, and oversight structures that make
           it defensible. I&apos;m most useful when the problem involves both technical judgment
           and regulatory context — translating between what the model does and what the
