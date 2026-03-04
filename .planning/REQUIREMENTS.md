@@ -16,20 +16,20 @@
 
 ### Navigation
 
-- [ ] **NAV-01**: Sticky top navigation with links: About, Experience, Skills, Education, Contact
-- [ ] **NAV-02**: Glassmorphism styling: bg rgba(250,251,253,0.85) backdrop-blur-[16px] border-b border-[rgba(1,30,65,0.04)]
-- [ ] **NAV-03**: Active section indicator uses Framer Motion layoutId shared amber underline animation
-- [ ] **NAV-04**: Smooth scroll behavior with scroll-mt offset for sticky nav height
-- [ ] **NAV-05**: Nav background opacity increases on scroll past hero
+- [x] **NAV-01**: Sticky top navigation with links: About, Experience, Skills, Education, Contact
+- [x] **NAV-02**: Glassmorphism styling: bg rgba(250,251,253,0.85) backdrop-blur-[16px] border-b border-[rgba(1,30,65,0.04)]
+- [x] **NAV-03**: Active section indicator uses Framer Motion layoutId shared amber underline animation
+- [x] **NAV-04**: Smooth scroll behavior with scroll-mt offset for sticky nav height
+- [x] **NAV-05**: Nav background opacity increases on scroll past hero
 
 ### Hero Section
 
-- [ ] **HERO-01**: Full viewport height section with Crowe Indigo Dark (#011E41) background
-- [ ] **HERO-02**: Aurora background (React Bits) with indigo spectrum colors ['#011E41','#002E62','#003F9F'] at 0.3 opacity
-- [ ] **HERO-03**: Name "Achyuth Rachur" animated via React Bits SplitText — character stagger, color #f6f7fa
-- [ ] **HERO-04**: Subtitle "Staff Consultant | Integrated Risk Management" animated via React Bits BlurText — word-by-word, muted white rgba(246,247,250,0.7)
-- [ ] **HERO-05**: Amber underline under name — Framer Motion div, width 0 → 100%, h-1 bg-[#F5A800] rounded-full, delay 0.8s
-- [ ] **HERO-06**: Scroll indicator at bottom — Iconsax ArrowDown with Anime.js infinite translateY bounce
+- [x] **HERO-01**: Full viewport height section with Crowe Indigo Dark (#011E41) background
+- [x] **HERO-02**: Aurora background (React Bits) with indigo spectrum colors ['#011E41','#002E62','#003F9F'] at 0.3 opacity
+- [x] **HERO-03**: Name "Achyuth Rachur" animated via React Bits SplitText — character stagger, color #f6f7fa
+- [x] **HERO-04**: Subtitle "Staff Consultant | Integrated Risk Management" animated via React Bits BlurText — word-by-word, muted white rgba(246,247,250,0.7)
+- [x] **HERO-05**: Amber underline under name — Framer Motion div, width 0 → 100%, h-1 bg-[#F5A800] rounded-full, delay 0.8s
+- [x] **HERO-06**: Scroll indicator at bottom — Iconsax ArrowDown with Anime.js infinite translateY bounce
 
 ### About Section
 
@@ -126,17 +126,17 @@ Which phases cover which requirements. Updated during roadmap creation.
 | SCAF-04 | Phase 1 — Foundation | Complete |
 | SCAF-05 | Phase 1 — Foundation | Complete |
 | SCAF-06 | Phase 1 — Foundation | Complete |
-| NAV-01 | Phase 2 — Hero + Navigation | Pending |
-| NAV-02 | Phase 2 — Hero + Navigation | Pending |
-| NAV-03 | Phase 2 — Hero + Navigation | Pending |
-| NAV-04 | Phase 2 — Hero + Navigation | Pending |
-| NAV-05 | Phase 2 — Hero + Navigation | Pending |
-| HERO-01 | Phase 2 — Hero + Navigation | Pending |
-| HERO-02 | Phase 2 — Hero + Navigation | Pending |
-| HERO-03 | Phase 2 — Hero + Navigation | Pending |
-| HERO-04 | Phase 2 — Hero + Navigation | Pending |
-| HERO-05 | Phase 2 — Hero + Navigation | Pending |
-| HERO-06 | Phase 2 — Hero + Navigation | Pending |
+| NAV-01 | Phase 2 — Hero + Navigation | Complete |
+| NAV-02 | Phase 2 — Hero + Navigation | Complete |
+| NAV-03 | Phase 2 — Hero + Navigation | Complete |
+| NAV-04 | Phase 2 — Hero + Navigation | Complete |
+| NAV-05 | Phase 2 — Hero + Navigation | Complete |
+| HERO-01 | Phase 2 — Hero + Navigation | Complete |
+| HERO-02 | Phase 2 — Hero + Navigation | Complete |
+| HERO-03 | Phase 2 — Hero + Navigation | Complete |
+| HERO-04 | Phase 2 — Hero + Navigation | Complete |
+| HERO-05 | Phase 2 — Hero + Navigation | Complete |
+| HERO-06 | Phase 2 — Hero + Navigation | Complete |
 | ABOUT-01 | Phase 3 — Content Sections | Pending |
 | ABOUT-02 | Phase 3 — Content Sections | Pending |
 | ABOUT-03 | Phase 3 — Content Sections | Pending |

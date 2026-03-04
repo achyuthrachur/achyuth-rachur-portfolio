@@ -3,14 +3,14 @@ gsd_state_version: 1.0
 milestone: v1.0
 milestone_name: milestone
 status: planning
-stopped_at: Phase 2 context gathered
-last_updated: "2026-03-04T03:37:56.668Z"
+stopped_at: Completed 02-hero-navigation/02-02-PLAN.md
+last_updated: "2026-03-04T04:03:11.326Z"
 last_activity: 2026-03-03 — Roadmap created, 5 phases derived from 41 v1 requirements
 progress:
   total_phases: 5
   completed_phases: 1
-  total_plans: 3
-  completed_plans: 3
+  total_plans: 6
+  completed_plans: 5
   percent: 0
 ---
 
@@ -53,6 +53,8 @@ Progress: [░░░░░░░░░░] 0%
 | Phase 01-foundation P01 | 19 | 2 tasks | 16 files |
 | Phase 01-foundation P02 | 4 | 2 tasks | 6 files |
 | Phase 01-foundation P03 | 10 | 2 tasks | 11 files |
+| Phase 02-hero-navigation P01 | 2 | 1 tasks | 1 files |
+| Phase 02-hero-navigation P02 | 2 | 1 tasks | 1 files |
 
 ## Accumulated Context
 
@@ -76,6 +78,11 @@ Recent decisions affecting current work:
 - [Phase 01-foundation]: motion package (not framer-motion) — correct 2024+ package name; import path is motion/react
 - [Phase 01-foundation]: animejs v4 built-in types — @types/animejs covers v3 API and would cause conflicts; NOT installed
 - [Phase 01-foundation]: iconsax-react requires --legacy-peer-deps — declares react ^17||^18 peer deps but project uses React 19
+- [Phase 02-hero-navigation]: Dynamic nav bg opacity uses inline style rgba(250,251,253,opacity) — Tailwind cannot express runtime-computed values
+- [Phase 02-hero-navigation]: Mobile dropdown uses absolute top-16 — nav is sticky not fixed, children are flow-positioned
+- [Phase 02-hero-navigation]: IntersectionObserver null guard required — #about/#experience/#skills/#education/#contact sections built in Phase 3
+- [Phase 02-hero-navigation]: anim.cancel() wrapped in block statement for EffectCallback void return compliance
+- [Phase 02-hero-navigation]: Aurora colorStops overridden to indigo-only — removes default amber stop that clashes with hero bg
 
 ### Pending Todos
 
@@ -87,6 +94,6 @@ None yet.
 
 ## Session Continuity
 
-Last session: 2026-03-04T03:37:56.659Z
-Stopped at: Phase 2 context gathered
-Resume file: .planning/phases/02-hero-navigation/02-CONTEXT.md
+Last session: 2026-03-04T04:03:11.320Z
+Stopped at: Completed 02-hero-navigation/02-02-PLAN.md
+Resume file: None
