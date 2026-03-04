@@ -3,14 +3,14 @@ gsd_state_version: 1.0
 milestone: v1.0
 milestone_name: milestone
 status: planning
-stopped_at: Completed 04-closing-sections 04-03-SUMMARY.md
-last_updated: "2026-03-04T18:20:00.000Z"
+stopped_at: Completed 05-polish-deploy 05-01-SUMMARY.md
+last_updated: "2026-03-04T20:12:44.413Z"
 last_activity: 2026-03-04 — Phase 4 (Closing Sections) complete — all 13 plans done, ready for Phase 5
 progress:
   total_phases: 5
   completed_phases: 4
-  total_plans: 13
-  completed_plans: 13
+  total_plans: 16
+  completed_plans: 14
   percent: 100
 ---
 
@@ -63,6 +63,7 @@ Progress: [██████████] 100%
 | Phase 04-closing-sections P01 | 5min | 1 tasks | 1 files |
 | Phase 04-closing-sections P02 | 6min | 2 tasks | 2 files |
 | Phase 04-closing-sections P03 | 5min | 2 tasks | 1 files |
+| Phase 05-polish-deploy P01 | 8min | 2 tasks | 9 files |
 
 ## Accumulated Context
 
@@ -105,6 +106,9 @@ Recent decisions affecting current work:
 - [Phase 04-closing-sections]: Footer is pure server component — no use client, background applied by page.tsx wrapper
 - [Phase 04-closing-sections]: Footer nested inside contact section wrapper in page.tsx — bg-[#0f172a] flows through both ContactSection and Footer
 - [Phase 04-closing-sections]: Section wrapper pattern established — page.tsx owns background color, component owns content layout
+- [Phase 05-polish-deploy]: useReducedMotion conditional spread pattern for whileInView components — clean, zero-runtime cost
+- [Phase 05-polish-deploy]: initial=false + duration:0 pattern for animate= components in HeroSection — final state renders immediately
+- [Phase 05-polish-deploy]: controls.set('visible') early-return for SplitText/BlurText — synchronous jump to visible state
 
 ### Pending Todos
 
@@ -116,6 +120,6 @@ None yet.
 
 ## Session Continuity
 
-Last session: 2026-03-04T18:20:00.000Z
-Stopped at: Phase 4 closed — 04-03-SUMMARY.md written, STATE.md updated. Proceeding to Phase 5 planning.
+Last session: 2026-03-04T20:12:44.402Z
+Stopped at: Completed 05-polish-deploy 05-01-SUMMARY.md
 Resume file: None

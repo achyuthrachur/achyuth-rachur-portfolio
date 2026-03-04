@@ -76,12 +76,12 @@
 
 ### Design Compliance
 
-- [ ] **DSGN-01**: No pure white (#FFFFFF) page backgrounds — use #f8f9fc or warmer alternatives
-- [ ] **DSGN-02**: No pure black (#000000) text — use #2d3142
-- [ ] **DSGN-03**: No borders on cards — use layered indigo-tinted shadows only
-- [ ] **DSGN-04**: No rgba(0,0,0,*) shadows — use rgba(1,30,65,*) throughout
-- [ ] **DSGN-05**: prefers-reduced-motion respected — all animations disabled/instant when user prefers reduced motion
-- [ ] **DSGN-06**: All section transitions use background color shifts (no <hr> or horizontal rules)
+- [x] **DSGN-01**: No pure white (#FFFFFF) page backgrounds — use #f8f9fc or warmer alternatives
+- [x] **DSGN-02**: No pure black (#000000) text — use #2d3142
+- [x] **DSGN-03**: No borders on cards — use layered indigo-tinted shadows only
+- [x] **DSGN-04**: No rgba(0,0,0,*) shadows — use rgba(1,30,65,*) throughout
+- [x] **DSGN-05**: prefers-reduced-motion respected — all animations disabled/instant when user prefers reduced motion
+- [x] **DSGN-06**: All section transitions use background color shifts (no <hr> or horizontal rules)
 
 ### Quality & Deployment
 
@@ -162,12 +162,12 @@ Which phases cover which requirements. Updated during roadmap creation.
 | CONT-05 | Phase 4 — Closing Sections | Complete |
 | FOOT-01 | Phase 4 — Closing Sections | Complete |
 | FOOT-02 | Phase 4 — Closing Sections | Complete |
-| DSGN-01 | Phase 5 — Polish + Deploy | Pending |
-| DSGN-02 | Phase 5 — Polish + Deploy | Pending |
-| DSGN-03 | Phase 5 — Polish + Deploy | Pending |
-| DSGN-04 | Phase 5 — Polish + Deploy | Pending |
-| DSGN-05 | Phase 5 — Polish + Deploy | Pending |
-| DSGN-06 | Phase 5 — Polish + Deploy | Pending |
+| DSGN-01 | Phase 5 — Polish + Deploy | Complete |
+| DSGN-02 | Phase 5 — Polish + Deploy | Complete |
+| DSGN-03 | Phase 5 — Polish + Deploy | Complete |
+| DSGN-04 | Phase 5 — Polish + Deploy | Complete |
+| DSGN-05 | Phase 5 — Polish + Deploy | Complete |
+| DSGN-06 | Phase 5 — Polish + Deploy | Complete |
 | QUAL-01 | Phase 5 — Polish + Deploy | Pending |
 | QUAL-02 | Phase 5 — Polish + Deploy | Pending |
 | QUAL-03 | Phase 5 — Polish + Deploy | Pending |
