@@ -3,14 +3,14 @@ gsd_state_version: 1.0
 milestone: v1.0
 milestone_name: milestone
 status: planning
-stopped_at: Completed 01-foundation-01-01-PLAN.md
-last_updated: "2026-03-04T02:03:14.572Z"
+stopped_at: Completed 01-foundation-01-02-PLAN.md
+last_updated: "2026-03-04T02:12:40.972Z"
 last_activity: 2026-03-03 — Roadmap created, 5 phases derived from 41 v1 requirements
 progress:
   total_phases: 5
   completed_phases: 0
   total_plans: 3
-  completed_plans: 1
+  completed_plans: 2
   percent: 0
 ---
 
@@ -51,6 +51,7 @@ Progress: [░░░░░░░░░░] 0%
 
 *Updated after each plan completion*
 | Phase 01-foundation P01 | 19 | 2 tasks | 16 files |
+| Phase 01-foundation P02 | 4 | 2 tasks | 6 files |
 
 ## Accumulated Context
 
@@ -67,6 +68,9 @@ Recent decisions affecting current work:
 - [Phase 01-foundation]: Scaffolded to temp lowercase dir due to npm capital letter restriction; package named achyuth-rachur-portfolio
 - [Phase 01-foundation]: Tailwind v4 uses @import css directive — no tailwind.config.ts generated; custom tokens added via @theme in Plan 02
 - [Phase 01-foundation]: Next.js 16 uses Turbopack by default for dev and prod builds
+- [Phase 01-foundation]: shadcn registry blocked by corporate SSL proxy — Badge created manually from canonical source; identical output to CLI
+- [Phase 01-foundation]: Tailwind v4 @theme block is source of truth for all Crowe color/shadow/font tokens — no tailwind.config.ts needed
+- [Phase 01-foundation]: clsx + class-variance-authority + tailwind-merge installed as direct dependencies (not auto-installed by shadcn CLI due to network failure)
 
 ### Pending Todos
 
@@ -78,6 +82,6 @@ None yet.
 
 ## Session Continuity
 
-Last session: 2026-03-04T02:03:14.561Z
-Stopped at: Completed 01-foundation-01-01-PLAN.md
+Last session: 2026-03-04T02:12:40.961Z
+Stopped at: Completed 01-foundation-01-02-PLAN.md
 Resume file: None

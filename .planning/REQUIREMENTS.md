@@ -9,8 +9,8 @@
 
 - [x] **SCAF-01**: Project is scaffolded with Next.js 14+ App Router, TypeScript, Tailwind CSS, src/ directory structure
 - [x] **SCAF-02**: Static export configured (output: "export", images: { unoptimized: true }) for Cloudflare Pages
-- [ ] **SCAF-03**: shadcn/ui initialized with Crowe theme overrides (DESIGN.md Section 3 HSL tokens in globals.css)
-- [ ] **SCAF-04**: Tailwind config extended with full Crowe color tokens, tint scale, shadow system, font families, and backgroundColor aliases
+- [x] **SCAF-03**: shadcn/ui initialized with Crowe theme overrides (DESIGN.md Section 3 HSL tokens in globals.css)
+- [x] **SCAF-04**: Tailwind config extended with full Crowe color tokens, tint scale, shadow system, font families, and backgroundColor aliases
 - [ ] **SCAF-05**: animejs, framer-motion, iconsax-react installed
 - [ ] **SCAF-06**: React Bits components installed (TS-TW): SplitText, BlurText, ShinyText, CountUp, GradientText, SpotlightCard, TiltedCard, AnimatedList, Aurora — via CLI or manual copy from reactbits.dev
 
@@ -122,8 +122,8 @@ Which phases cover which requirements. Updated during roadmap creation.
 |-------------|-------|--------|
 | SCAF-01 | Phase 1 — Foundation | Complete |
 | SCAF-02 | Phase 1 — Foundation | Complete |
-| SCAF-03 | Phase 1 — Foundation | Pending |
-| SCAF-04 | Phase 1 — Foundation | Pending |
+| SCAF-03 | Phase 1 — Foundation | Complete |
+| SCAF-04 | Phase 1 — Foundation | Complete |
 | SCAF-05 | Phase 1 — Foundation | Pending |
 | SCAF-06 | Phase 1 — Foundation | Pending |
 | NAV-01 | Phase 2 — Hero + Navigation | Pending |
