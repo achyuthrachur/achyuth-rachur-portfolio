@@ -7,7 +7,7 @@ import { SpotlightCard } from '@/components/reactbits/SpotlightCard';
 // Amber-wash highlight span helper
 function Highlight({ children }: { children: string }) {
   return (
-    <span className="bg-[#fff8eb] font-semibold px-1 rounded-sm">{children}</span>
+    <span className="bg-[#eef2ff] text-[#4f46e5] font-semibold px-1 rounded-sm">{children}</span>
   );
 }
 
@@ -55,7 +55,7 @@ export function ExperienceSection() {
 
       <div ref={containerRef} className="flex flex-col gap-4">
         {/* Card 1 */}
-        <SpotlightCard className="exp-card p-6" spotlightColor="rgba(245,168,0,0.08)">
+        <SpotlightCard className="exp-card p-6" spotlightColor="rgba(99,102,241,0.08)">
           <p className="text-base text-tint-900 leading-relaxed font-body">
             Led delivery of <Highlight>AI enablement</Highlight> for financial institutions,
             translating risk/compliance needs into practical ML and GenAI use cases with clear
@@ -64,7 +64,7 @@ export function ExperienceSection() {
         </SpotlightCard>
 
         {/* Card 2 */}
-        <SpotlightCard className="exp-card p-6" spotlightColor="rgba(245,168,0,0.08)">
+        <SpotlightCard className="exp-card p-6" spotlightColor="rgba(99,102,241,0.08)">
           <p className="text-base text-tint-900 leading-relaxed font-body">
             Designed and developed AI solutions across audit, financial crime, model validation,
             and reconciliation, targeting automation of evidence collection, investigation
@@ -73,7 +73,7 @@ export function ExperienceSection() {
         </SpotlightCard>
 
         {/* Card 3 */}
-        <SpotlightCard className="exp-card p-6" spotlightColor="rgba(245,168,0,0.08)">
+        <SpotlightCard className="exp-card p-6" spotlightColor="rgba(99,102,241,0.08)">
           <p className="text-base text-tint-900 leading-relaxed font-body">
             Implemented <Highlight>governance-first</Highlight> patterns for AI in production,
             including model documentation, control design, <Highlight>bias/fairness</Highlight>{' '}
@@ -82,7 +82,7 @@ export function ExperienceSection() {
         </SpotlightCard>
 
         {/* Card 4 */}
-        <SpotlightCard className="exp-card p-6" spotlightColor="rgba(245,168,0,0.08)">
+        <SpotlightCard className="exp-card p-6" spotlightColor="rgba(99,102,241,0.08)">
           <p className="text-base text-tint-900 leading-relaxed font-body">
             Supported <Highlight>Model Risk Management (MRM)</Highlight> programs through{' '}
             <Highlight>independent validation</Highlight> of vendor and internally developed
@@ -92,7 +92,7 @@ export function ExperienceSection() {
         </SpotlightCard>
 
         {/* Card 5 */}
-        <SpotlightCard className="exp-card p-6" spotlightColor="rgba(245,168,0,0.08)">
+        <SpotlightCard className="exp-card p-6" spotlightColor="rgba(99,102,241,0.08)">
           <p className="text-base text-tint-900 leading-relaxed font-body">
             Evaluated model documentation and internal controls against regulatory expectations
             and industry sound practices; delivered clear findings, remediation recommendations,
@@ -101,7 +101,7 @@ export function ExperienceSection() {
         </SpotlightCard>
 
         {/* Card 6 */}
-        <SpotlightCard className="exp-card p-6" spotlightColor="rgba(245,168,0,0.08)">
+        <SpotlightCard className="exp-card p-6" spotlightColor="rgba(99,102,241,0.08)">
           <p className="text-base text-tint-900 leading-relaxed font-body">
             Partnered with stakeholders across risk, compliance, audit, and technology to drive
             adoption—balancing innovation speed with operational constraints and control

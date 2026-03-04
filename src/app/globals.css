@@ -2,129 +2,109 @@
 
 /* ══════════════════════════════════════════════════════════════════
    1. TAILWIND v4 IMPORT
-   Replaces the old @tailwind base; components; utilities directives
    ══════════════════════════════════════════════════════════════════ */
 @import "tailwindcss";
 
 /* ══════════════════════════════════════════════════════════════════
-   2. shadcn/ui HSL OVERRIDES — Crowe Brand Theme
-   These CSS variables are read by shadcn components automatically.
-   Values map to Crowe Indigo Dark as primary, Amber as secondary.
+   2. shadcn/ui HSL OVERRIDES — Personal Brand Theme
+   Primary: Slate-900 (#0f172a)  Accent: Indigo-500 (#6366f1)
    ══════════════════════════════════════════════════════════════════ */
 @layer base {
   :root {
-    --background: 225 33% 98%;
-    --foreground: 228 20% 22%;
-    --card: 225 50% 99%;
-    --card-foreground: 228 20% 22%;
+    --background: 210 40% 98%;          /* #f8fafc slate-50 */
+    --foreground: 222 47% 11%;          /* #0f172a slate-900 */
+    --card: 0 0% 100%;                  /* #ffffff */
+    --card-foreground: 222 47% 11%;
     --popover: 0 0% 100%;
-    --popover-foreground: 228 20% 22%;
-    --primary: 215 98% 13%;
-    --primary-foreground: 225 33% 97%;
-    --secondary: 39 100% 48%;
-    --secondary-foreground: 215 98% 13%;
-    --muted: 225 20% 96%;
-    --muted-foreground: 228 10% 37%;
-    --accent: 39 100% 48%;
-    --accent-foreground: 215 98% 13%;
-    --destructive: 341 79% 56%;
-    --destructive-foreground: 225 33% 97%;
-    --border: 226 17% 89%;
-    --input: 226 17% 89%;
-    --ring: 215 100% 19%;
+    --popover-foreground: 222 47% 11%;
+    --primary: 222 47% 11%;             /* #0f172a slate-900 */
+    --primary-foreground: 210 40% 98%;
+    --secondary: 239 84% 67%;          /* #6366f1 indigo-500 */
+    --secondary-foreground: 0 0% 100%;
+    --muted: 214 32% 91%;               /* #e2e8f0 slate-200 */
+    --muted-foreground: 215 16% 47%;   /* #64748b slate-500 */
+    --accent: 239 84% 67%;             /* #6366f1 indigo-500 */
+    --accent-foreground: 0 0% 100%;
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 100%;
+    --border: 214 32% 91%;             /* #e2e8f0 slate-200 */
+    --input: 214 32% 91%;
+    --ring: 239 84% 67%;               /* #6366f1 indigo-500 */
     --radius: 0.75rem;
   }
 }
 
 /* ══════════════════════════════════════════════════════════════════
-   3. CROWE RAW CSS CUSTOM PROPERTIES
-   Direct :root variables for use in any CSS value.
-   These are in addition to the @theme Tailwind tokens below.
-   Source: DESIGN.md Section 1.2
+   3. RAW CSS CUSTOM PROPERTIES — Personal Brand Palette
    ══════════════════════════════════════════════════════════════════ */
 :root {
-  /* Primary Colors */
-  --crowe-amber-bright: #FFD231;
-  --crowe-amber-core: #F5A800;
-  --crowe-amber-dark: #D7761D;
-  --crowe-indigo-bright: #003F9F;
-  --crowe-indigo-core: #002E62;
-  --crowe-indigo-dark: #011E41;
+  /* ── Brand Dark (hero bg, footer, nav brand element) ── */
+  --crowe-indigo-dark: #0f172a;        /* slate-900 — was Crowe Indigo Dark */
+  --crowe-indigo-core: #1e293b;        /* slate-800 */
+  --crowe-indigo-bright: #334155;      /* slate-700 */
 
-  /* Secondary Colors */
-  --crowe-teal-bright: #16D9BC;
-  --crowe-teal-core: #05AB8C;
-  --crowe-teal-dark: #0C7876;
-  --crowe-cyan-light: #8FE1FF;
-  --crowe-cyan-core: #54C0E8;
-  --crowe-cyan-dark: #007DA3;
-  --crowe-blue-light: #32A8FD;
-  --crowe-blue-core: #0075C9;
-  --crowe-blue-dark: #0050AD;
-  --crowe-violet-bright: #EA80FF;
-  --crowe-violet-core: #B14FC5;
-  --crowe-violet-dark: #612080;
-  --crowe-coral-bright: #FF526F;
-  --crowe-coral-core: #E5376B;
-  --crowe-coral-dark: #992A5C;
+  /* ── Accent / Pop Color (underlines, CTAs, highlights) ── */
+  --crowe-amber-core: #6366f1;         /* indigo-500 — was Crowe Amber */
+  --crowe-amber-dark: #4f46e5;         /* indigo-600 — hover state */
+  --crowe-amber-bright: #818cf8;       /* indigo-400 — lighter tint */
 
-  /* Warm Neutral Tints */
+  /* ── Neutral Tints (slate-based, cool undertone) ── */
   --crowe-white: #FFFFFF;
   --crowe-black: #000000;
-  --crowe-tint-950: #1a1d2b;
-  --crowe-tint-900: #2d3142;
-  --crowe-tint-700: #545968;
-  --crowe-tint-500: #8b90a0;
-  --crowe-tint-300: #c8cbd6;
-  --crowe-tint-200: #dfe1e8;
-  --crowe-tint-100: #eef0f4;
-  --crowe-tint-50: #f6f7fa;
+  --crowe-tint-950: #020617;           /* slate-950 */
+  --crowe-tint-900: #0f172a;           /* slate-900 — primary text */
+  --crowe-tint-700: #334155;           /* slate-700 — secondary text */
+  --crowe-tint-500: #64748b;           /* slate-500 — muted text */
+  --crowe-tint-300: #cbd5e1;           /* slate-300 — borders */
+  --crowe-tint-200: #e2e8f0;           /* slate-200 — dividers */
+  --crowe-tint-100: #f1f5f9;           /* slate-100 — subtle bg */
+  --crowe-tint-50: #f8fafc;            /* slate-50 — off-white sections */
 
-  /* Semantic Tokens */
+  /* ── Semantic Tokens ── */
   --color-text-primary: var(--crowe-tint-900);
   --color-text-secondary: var(--crowe-tint-700);
   --color-text-muted: var(--crowe-tint-500);
-  --color-text-inverse: #f6f7fa;
+  --color-text-inverse: #f8fafc;
   --color-text-brand: var(--crowe-indigo-dark);
 
-  /* Surface Tokens */
-  --color-surface-page: #f8f9fc;
-  --color-surface-primary: #fafbfd;
+  /* ── Surface Tokens ── */
+  --color-surface-page: #f8fafc;
+  --color-surface-primary: #ffffff;
   --color-surface-secondary: var(--crowe-tint-50);
   --color-surface-elevated: var(--crowe-white);
   --color-surface-brand: var(--crowe-indigo-dark);
-  --color-surface-brand-soft: #f0f2f8;
+  --color-surface-brand-soft: #eef2ff;   /* indigo-50 — replaces indigo wash */
   --color-surface-accent: var(--crowe-amber-core);
-  --color-surface-amber-soft: #fff8eb;
+  --color-surface-amber-soft: #eef2ff;   /* indigo-50 — replaces amber soft */
 
   --color-accent-primary: var(--crowe-amber-core);
   --color-accent-primary-hover: var(--crowe-amber-dark);
   --color-accent-secondary: var(--crowe-indigo-core);
 
-  /* Border Tokens */
+  /* ── Border Tokens ── */
   --color-border: var(--crowe-tint-200);
   --color-border-strong: var(--crowe-tint-300);
 
-  /* Functional */
-  --color-success: #05AB8C;
-  --color-warning: var(--crowe-amber-core);
-  --color-error: var(--crowe-coral-core);
-  --color-info: var(--crowe-blue-core);
+  /* ── Functional Colors ── */
+  --color-success: #10b981;            /* emerald-500 */
+  --color-warning: #f59e0b;            /* amber-500 */
+  --color-error: #ef4444;              /* red-500 */
+  --color-info: #3b82f6;               /* blue-500 */
 
-  /* Duration Tokens */
+  /* ── Duration Tokens ── */
   --duration-instant: 75ms;
   --duration-fast: 150ms;
   --duration-normal: 250ms;
   --duration-slow: 350ms;
   --duration-slower: 500ms;
 
-  /* Easing Tokens */
+  /* ── Easing Tokens ── */
   --ease-out: cubic-bezier(0.16, 1, 0.3, 1);
   --ease-in: cubic-bezier(0.7, 0, 0.84, 0);
   --ease-in-out: cubic-bezier(0.65, 0, 0.35, 1);
   --ease-spring: cubic-bezier(0.34, 1.56, 0.64, 1);
 
-  /* Border Radius Tokens */
+  /* ── Border Radius Tokens ── */
   --radius-sm: 6px;
   --radius-md: 10px;
   --radius-lg: 12px;
@@ -135,68 +115,47 @@
 
 /* ══════════════════════════════════════════════════════════════════
    4. TAILWIND v4 @theme BLOCK
-   Translates DESIGN.md tailwind.config.ts into Tailwind v4 CSS-first format.
-   --color-* → bg-*, text-*, border-* utilities
-   --font-* → font-* utilities
-   --shadow-* → shadow-* utilities
-   NOTE: Font fallback uses Arial chain (no Helvetica Now license available).
    ══════════════════════════════════════════════════════════════════ */
 @theme {
-  /* ── Crowe Primary Color Palette ── */
-  --color-crowe-amber-bright: #FFD231;
-  --color-crowe-amber: #F5A800;
-  --color-crowe-amber-dark: #D7761D;
-  --color-crowe-indigo-bright: #003F9F;
-  --color-crowe-indigo: #002E62;
-  --color-crowe-indigo-dark: #011E41;
+  /* ── Brand Dark Scale (slate) ── */
+  --color-crowe-indigo-dark: #0f172a;
+  --color-crowe-indigo: #1e293b;
+  --color-crowe-indigo-bright: #334155;
 
-  /* ── Crowe Secondary Color Palette ── */
-  --color-crowe-teal-bright: #16D9BC;
-  --color-crowe-teal: #05AB8C;
-  --color-crowe-teal-dark: #0C7876;
-  --color-crowe-cyan-light: #8FE1FF;
-  --color-crowe-cyan: #54C0E8;
-  --color-crowe-cyan-dark: #007DA3;
-  --color-crowe-blue-light: #32A8FD;
-  --color-crowe-blue: #0075C9;
-  --color-crowe-blue-dark: #0050AD;
-  --color-crowe-violet-bright: #EA80FF;
-  --color-crowe-violet: #B14FC5;
-  --color-crowe-violet-dark: #612080;
-  --color-crowe-coral-bright: #FF526F;
-  --color-crowe-coral: #E5376B;
-  --color-crowe-coral-dark: #992A5C;
+  /* ── Accent Scale (indigo) ── */
+  --color-crowe-amber-bright: #818cf8;
+  --color-crowe-amber: #6366f1;
+  --color-crowe-amber-dark: #4f46e5;
 
-  /* ── Warm Tint Scale ── */
-  --color-tint-950: #1a1d2b;
-  --color-tint-900: #2d3142;
-  --color-tint-700: #545968;
-  --color-tint-500: #8b90a0;
-  --color-tint-300: #c8cbd6;
-  --color-tint-200: #dfe1e8;
-  --color-tint-100: #eef0f4;
-  --color-tint-50: #f6f7fa;
+  /* ── Neutral Tint Scale (slate) ── */
+  --color-tint-950: #020617;
+  --color-tint-900: #0f172a;
+  --color-tint-700: #334155;
+  --color-tint-500: #64748b;
+  --color-tint-300: #cbd5e1;
+  --color-tint-200: #e2e8f0;
+  --color-tint-100: #f1f5f9;
+  --color-tint-50: #f8fafc;
 
-  /* ── Background Color Aliases ── */
-  --color-page: #f8f9fc;
-  --color-section: #f6f7fa;
-  --color-section-warm: #f0f2f8;
-  --color-section-amber: #fff8eb;
+  /* ── Background Aliases ── */
+  --color-page: #f8fafc;
+  --color-section: #f1f5f9;
+  --color-section-warm: #eef2ff;       /* indigo-50 wash */
+  --color-section-amber: #eef2ff;      /* alias — same indigo-50 */
 
-  /* ── Font Families ── */
-  /* Using Arial fallback chain — no Helvetica Now license available */
-  --font-display: Arial, 'Helvetica Neue', Helvetica, system-ui, sans-serif;
-  --font-body: Arial, 'Helvetica Neue', Helvetica, system-ui, sans-serif;
+  /* ── Font Families — Inter via @fontsource-variable/inter ── */
+  --font-display: 'Inter Variable', 'Inter', system-ui, -apple-system, sans-serif;
+  --font-body: 'Inter Variable', 'Inter', system-ui, -apple-system, sans-serif;
   --font-mono: 'JetBrains Mono', 'Fira Code', 'IBM Plex Mono', Consolas, monospace;
 
-  /* ── Shadow System (indigo-tinted, not pure black) ── */
-  --shadow-crowe-sm: 0 1px 3px rgba(1, 30, 65, 0.06), 0 1px 2px rgba(1, 30, 65, 0.04);
-  --shadow-crowe-md: 0 4px 8px -2px rgba(1, 30, 65, 0.06), 0 2px 4px -1px rgba(1, 30, 65, 0.04);
-  --shadow-crowe-lg: 0 6px 16px -4px rgba(1, 30, 65, 0.07), 0 4px 6px -2px rgba(1, 30, 65, 0.04);
-  --shadow-crowe-xl: 0 12px 32px -8px rgba(1, 30, 65, 0.08), 0 8px 16px -4px rgba(1, 30, 65, 0.03);
-  --shadow-crowe-hover: 0 8px 24px -4px rgba(1, 30, 65, 0.10), 0 4px 8px -2px rgba(1, 30, 65, 0.04);
-  --shadow-crowe-card: 0 1px 3px rgba(1, 30, 65, 0.04), 0 6px 16px rgba(1, 30, 65, 0.04), 0 12px 32px rgba(1, 30, 65, 0.02);
-  --shadow-amber-glow: 0 4px 16px rgba(245, 168, 0, 0.20);
+  /* ── Shadow System (slate-tinted) ── */
+  --shadow-crowe-sm: 0 1px 3px rgba(15, 23, 42, 0.06), 0 1px 2px rgba(15, 23, 42, 0.04);
+  --shadow-crowe-md: 0 4px 8px -2px rgba(15, 23, 42, 0.06), 0 2px 4px -1px rgba(15, 23, 42, 0.04);
+  --shadow-crowe-lg: 0 6px 16px -4px rgba(15, 23, 42, 0.07), 0 4px 6px -2px rgba(15, 23, 42, 0.04);
+  --shadow-crowe-xl: 0 12px 32px -8px rgba(15, 23, 42, 0.08), 0 8px 16px -4px rgba(15, 23, 42, 0.03);
+  --shadow-crowe-hover: 0 8px 24px -4px rgba(15, 23, 42, 0.10), 0 4px 8px -2px rgba(15, 23, 42, 0.04);
+  --shadow-crowe-card: 0 1px 3px rgba(15, 23, 42, 0.04), 0 6px 16px rgba(15, 23, 42, 0.04), 0 12px 32px rgba(15, 23, 42, 0.02);
+  --shadow-amber-glow: 0 4px 16px rgba(99, 102, 241, 0.25);  /* indigo glow */
 }
 
 /* ══════════════════════════════════════════════════════════════════
@@ -207,14 +166,12 @@ html {
 }
 
 body {
-  background-color: #f8f9fc;
-  color: #2d3142;
+  background-color: #f8fafc;
+  color: #0f172a;
 }
 
 /* ══════════════════════════════════════════════════════════════════
    6. ACCESSIBILITY — Reduced Motion
-   Disables all animations when user prefers reduced motion.
-   Applies to Anime.js, motion/react (framer-motion), and CSS transitions.
    ══════════════════════════════════════════════════════════════════ */
 @media (prefers-reduced-motion: reduce) {
   *,

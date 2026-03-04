@@ -30,11 +30,11 @@ export function HeroSection() {
   return (
     <section
       id="hero"
-      className="relative min-h-screen bg-[#011E41] flex items-center justify-center overflow-hidden"
+      className="relative min-h-screen bg-[#0f172a] flex items-center justify-center overflow-hidden"
     >
       {/* Aurora atmospheric background — indigo-only stops, removes default amber */}
       <Aurora
-        colorStops={['#011E41', '#002E62', '#003F9F']}
+        colorStops={['#0f172a', '#1e293b', '#312e81']}
         blend={0.3}
         amplitude={1.0}
         speed={0.5}
@@ -54,7 +54,7 @@ export function HeroSection() {
 
         {/* Amber underline brand moment — expands left-to-right at 0.8s */}
         <motion.div
-          className="h-1 rounded-full bg-[#F5A800] mt-2 mb-6"
+          className="h-1 rounded-full bg-[#6366f1] mt-2 mb-6"
           initial={{ width: 0 }}
           animate={{ width: '100%' }}
           transition={{ delay: 0.8, duration: 0.8, ease: [0.16, 1, 0.3, 1] }}

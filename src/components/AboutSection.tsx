@@ -13,7 +13,7 @@ export function AboutSection() {
       >
         <h2 className="text-3xl font-semibold text-crowe-indigo-dark font-body">About</h2>
         <motion.div
-          className="h-0.5 bg-crowe-amber rounded-full mt-2 mb-8"
+          className="h-0.5 bg-[#6366f1] rounded-full mt-2 mb-8"
           initial={{ width: 0 }}
           whileInView={{ width: '3rem' }}
           viewport={{ once: true }}

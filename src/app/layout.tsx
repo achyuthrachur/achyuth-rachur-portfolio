@@ -1,5 +1,6 @@
 // src/app/layout.tsx
 import type { Metadata } from 'next';
+import '@fontsource-variable/inter';
 import './globals.css';
 
 export const metadata: Metadata = {

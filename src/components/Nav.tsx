@@ -18,21 +18,19 @@ export function Nav() {
   const [navBgOpacity, setNavBgOpacity] = useState(0.85);
   const { scrollY } = useScroll();
 
-  // NAV-05: Scroll-driven opacity — useMotionValueEvent (NOT .onChange())
   useMotionValueEvent(scrollY, 'change', (latest) => {
     const heroHeight = window.innerHeight;
     const progress = Math.min(latest / heroHeight, 1);
-    setNavBgOpacity(0.85 + 0.12 * progress); // 0.85 → 0.97
+    setNavBgOpacity(0.85 + 0.12 * progress);
   });
 
-  // NAV-03, NAV-04: IntersectionObserver for active section tracking
   useEffect(() => {
     const sectionIds = ['about', 'experience', 'skills', 'education', 'contact'];
     const observers: IntersectionObserver[] = [];
 
     sectionIds.forEach((id) => {
       const el = document.getElementById(id);
-      if (!el) return; // null guard — sections added in later phases
+      if (!el) return;
 
       const observer = new IntersectionObserver(
         ([entry]) => {
@@ -49,21 +47,17 @@ export function Nav() {
 
   return (
     <>
-      {/* NAV-01, NAV-02: Sticky glassmorphism nav */}
       <nav
-        className="sticky top-0 z-50 h-16 backdrop-blur-[16px] border-b border-[rgba(1,30,65,0.04)]"
-        style={{ backgroundColor: `rgba(250,251,253,${navBgOpacity})` }}
+        className="sticky top-0 z-50 h-16 backdrop-blur-[16px] border-b border-[rgba(15,23,42,0.06)]"
+        style={{ backgroundColor: `rgba(248,250,252,${navBgOpacity})` }}
       >
         <div className="max-w-5xl mx-auto px-6 h-full flex items-center justify-between">
-          {/* Logo / name */}
-          <a
-            href="#hero"
-            className="font-semibold text-crowe-indigo-dark font-body text-sm"
-          >
+          {/* Brand name */}
+          <a href="#hero" className="font-semibold text-tint-900 font-body text-sm tracking-tight">
             Achyuth Rachur
           </a>
 
-          {/* Desktop links — NAV-01, NAV-02, NAV-03 */}
+          {/* Desktop links */}
           <div className="hidden md:flex items-center gap-6">
             {NAV_LINKS.map(({ label, href }) => {
               const sectionId = href.replace('#', '');
@@ -75,15 +69,14 @@ export function Nav() {
                   href={href}
                   className={cn(
                     'relative pb-1 text-sm transition-colors duration-150',
-                    isActive ? 'text-crowe-indigo-dark' : 'text-tint-700'
+                    isActive ? 'text-tint-900' : 'text-tint-500'
                   )}
                 >
                   {label}
-                  {/* NAV-03: Amber underline slides between active links via layoutId */}
                   {isActive && (
                     <motion.div
                       layoutId="nav-underline"
-                      className="absolute bottom-0 left-0 right-0 h-0.5 bg-crowe-amber rounded-full"
+                      className="absolute bottom-0 left-0 right-0 h-0.5 bg-[#6366f1] rounded-full"
                       transition={{ type: 'spring', stiffness: 380, damping: 30 }}
                     />
                   )}
@@ -91,18 +84,18 @@ export function Nav() {
               );
             })}
 
-            {/* NAV-01: Contact CTA */}
+            {/* Contact CTA */}
             <a
               href="#contact"
-              className="bg-crowe-amber text-crowe-indigo-dark rounded-sm px-4 py-1.5 text-sm font-semibold"
+              className="bg-[#6366f1] text-white rounded-md px-4 py-1.5 text-sm font-semibold hover:bg-[#4f46e5] transition-colors duration-150"
             >
               Contact
             </a>
           </div>
 
-          {/* NAV-01 mobile: Hamburger button */}
+          {/* Mobile hamburger */}
           <button
-            className="md:hidden text-crowe-indigo-dark"
+            className="md:hidden text-tint-700"
             onClick={() => setMobileOpen((v) => !v)}
             aria-label="Toggle menu"
           >
@@ -115,11 +108,11 @@ export function Nav() {
         </div>
       </nav>
 
-      {/* NAV-01 mobile: Dropdown menu */}
+      {/* Mobile dropdown */}
       {mobileOpen && (
         <div
-          className="md:hidden absolute top-16 left-0 right-0 backdrop-blur-[16px] border-b border-[rgba(1,30,65,0.04)] px-6 py-4 flex flex-col gap-4 z-50"
-          style={{ backgroundColor: 'rgba(250,251,253,0.97)' }}
+          className="md:hidden absolute top-16 left-0 right-0 backdrop-blur-[16px] border-b border-[rgba(15,23,42,0.06)] px-6 py-4 flex flex-col gap-4 z-50"
+          style={{ backgroundColor: 'rgba(248,250,252,0.97)' }}
         >
           {NAV_LINKS.map(({ label, href }) => (
             <a
@@ -133,7 +126,7 @@ export function Nav() {
           ))}
           <a
             href="#contact"
-            className="bg-crowe-amber text-crowe-indigo-dark rounded-sm px-4 py-1.5 text-sm font-semibold text-center"
+            className="bg-[#6366f1] text-white rounded-md px-4 py-1.5 text-sm font-semibold text-center hover:bg-[#4f46e5] transition-colors"
             onClick={() => setMobileOpen(false)}
           >
             Contact

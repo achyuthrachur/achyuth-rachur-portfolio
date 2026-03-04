@@ -26,7 +26,7 @@ export default function Home() {
         <p className="font-body text-tint-500 text-sm">Education — coming in Phase 4</p>
       </section>
 
-      <section id="contact" className="scroll-mt-16 min-h-screen bg-[#011E41] flex items-center justify-center">
+      <section id="contact" className="scroll-mt-16 min-h-screen bg-[#0f172a] flex items-center justify-center">
         <p className="font-body text-tint-500 text-sm">Contact — coming in Phase 4</p>
       </section>
     </main>
