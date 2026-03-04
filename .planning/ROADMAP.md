@@ -104,5 +104,5 @@ Phases execute in numeric order: 1 → 2 → 3 → 4 → 5
 | 1. Foundation | 3/3 | Complete    | 2026-03-04 |
 | 2. Hero + Navigation | 3/3 | Complete    | 2026-03-04 |
 | 3. Content Sections | 4/4 | Complete    | 2026-03-04 |
-| 4. Closing Sections | 0/3 | Not started | - |
+| 4. Closing Sections | 2/3 | In Progress|  |
 | 5. Polish + Deploy | 0/TBD | Not started | - |

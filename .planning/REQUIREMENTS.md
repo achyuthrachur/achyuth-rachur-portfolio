@@ -56,10 +56,10 @@
 
 ### Education Section
 
-- [ ] **EDU-01**: Section background #fafbfd
-- [ ] **EDU-02**: Each education entry rendered in React Bits TiltedCard — borderless, crowe-card shadow, 12px radius
-- [ ] **EDU-03**: Fade-in on scroll via Framer Motion whileInView
-- [ ] **EDU-04**: Education placeholder compiles cleanly (user will provide actual content)
+- [x] **EDU-01**: Section background #fafbfd
+- [x] **EDU-02**: Each education entry rendered in React Bits TiltedCard — borderless, crowe-card shadow, 12px radius
+- [x] **EDU-03**: Fade-in on scroll via Framer Motion whileInView
+- [x] **EDU-04**: Education placeholder compiles cleanly (user will provide actual content)
 
 ### Contact Section
 
@@ -151,10 +151,10 @@ Which phases cover which requirements. Updated during roadmap creation.
 | SKILL-03 | Phase 3 — Content Sections | Complete |
 | SKILL-04 | Phase 3 — Content Sections | Complete |
 | SKILL-05 | Phase 3 — Content Sections | Complete |
-| EDU-01 | Phase 4 — Closing Sections | Pending |
-| EDU-02 | Phase 4 — Closing Sections | Pending |
-| EDU-03 | Phase 4 — Closing Sections | Pending |
-| EDU-04 | Phase 4 — Closing Sections | Pending |
+| EDU-01 | Phase 4 — Closing Sections | Complete |
+| EDU-02 | Phase 4 — Closing Sections | Complete |
+| EDU-03 | Phase 4 — Closing Sections | Complete |
+| EDU-04 | Phase 4 — Closing Sections | Complete |
 | CONT-01 | Phase 4 — Closing Sections | Pending |
 | CONT-02 | Phase 4 — Closing Sections | Pending |
 | CONT-03 | Phase 4 — Closing Sections | Pending |
