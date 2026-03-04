@@ -41,7 +41,12 @@ Plans:
   3. Clicking a nav link smoothly scrolls to that section with correct scroll-mt offset
   4. The active nav item shows an amber underline indicator that moves between items using Framer Motion layoutId
   5. The nav background visibly increases in opacity after scrolling past the hero
-**Plans**: TBD
+**Plans**: 3 plans
+
+Plans:
+- [ ] 02-01-PLAN.md — Build Nav component: glassmorphism sticky nav with scroll opacity, layoutId active underline, and mobile hamburger
+- [ ] 02-02-PLAN.md — Build HeroSection component: Aurora canvas, SplitText name, BlurText subtitle, amber underline, Anime.js scroll indicator
+- [ ] 02-03-PLAN.md — Wire page.tsx: import Nav + HeroSection, add placeholder sections for anchor testing, verify build
 
 ### Phase 3: Content Sections
 **Goal**: A visitor can read Achyuth's professional summary, experience bullets in SpotlightCards, and browse skills organized into four badge-grid categories
@@ -86,7 +91,7 @@ Phases execute in numeric order: 1 → 2 → 3 → 4 → 5
 | Phase | Plans Complete | Status | Completed |
 |-------|----------------|--------|-----------|
 | 1. Foundation | 3/3 | Complete    | 2026-03-04 |
-| 2. Hero + Navigation | 0/TBD | Not started | - |
+| 2. Hero + Navigation | 0/3 | Not started | - |
 | 3. Content Sections | 0/TBD | Not started | - |
 | 4. Closing Sections | 0/TBD | Not started | - |
 | 5. Polish + Deploy | 0/TBD | Not started | - |
