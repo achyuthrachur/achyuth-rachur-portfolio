@@ -46,13 +46,13 @@ export function EducationSection() {
         })}
       >
         <p className="text-xs font-semibold tracking-[0.2em] uppercase font-body mb-1">
-          <DecryptedText text="03 · EDUCATION" className="text-[#6366f1]" speed={30} />
+          <DecryptedText text="03 · EDUCATION" className="text-[#0075C9]" speed={30} />
         </p>
         <h2 className="text-3xl font-semibold font-body">
           <ShinyText text="Education" as="span" baseColor={headingColor} shineColor="rgba(255,255,255,0.85)" speed={6} />
         </h2>
         <motion.div
-          className="h-0.5 bg-[#6366f1] rounded-full mt-2 mb-8"
+          className="h-0.5 bg-[#0075C9] rounded-full mt-2 mb-8"
           {...(prefersReduced ? {} : {
             initial: { width: 0 },
             whileInView: { width: '3rem' },
@@ -72,14 +72,14 @@ export function EducationSection() {
         })}
       >
         <TiltedCard
-          glareColor="rgba(99, 102, 241, 0.6)"
+          glareColor="rgba(0, 117, 201, 0.6)"
           className="rounded-xl bg-white dark:bg-[#1e293b] p-8 shadow-crowe-card dark:shadow-none"
         >
           <p className="text-xs font-body text-tint-500 dark:text-[#64748b] uppercase tracking-widest mb-2">Degree</p>
           <h3 className="text-xl font-semibold text-tint-900 dark:text-[#f6f7fa] font-body">
             Bachelor of Science in Management and Data Analytics
           </h3>
-          <p className="text-base font-body text-tint-900 dark:text-[#818cf8] font-semibold mt-1">
+          <p className="text-base font-body text-tint-900 dark:text-[#54C0E8] font-semibold mt-1">
             Purdue University
           </p>
           <p className="text-sm font-body text-tint-500 dark:text-[#64748b] mt-1">December 2024</p>
@@ -89,7 +89,7 @@ export function EducationSection() {
       {/* Research subsection */}
       <div className="mt-12">
         <h3 className="text-xl font-semibold text-tint-900 dark:text-[#f6f7fa] font-body mb-2">Research</h3>
-        <div className="h-0.5 w-8 bg-[#6366f1] rounded-full mb-6" />
+        <div className="h-0.5 w-8 bg-[#0075C9] rounded-full mb-6" />
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
           {researchPapers.map((paper, index) => (
@@ -106,7 +106,7 @@ export function EducationSection() {
                 },
               })}
             >
-              <SpotlightCard spotlightColor="rgba(99, 102, 241, 0.08)" className="p-6">
+              <SpotlightCard spotlightColor="rgba(0, 117, 201, 0.08)" className="p-6">
                 <p className="text-xs font-body text-tint-500 dark:text-[#64748b] uppercase tracking-widest mb-2">
                   {paper.publication}
                 </p>
@@ -118,7 +118,7 @@ export function EducationSection() {
                   href={paper.url}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex items-center gap-1.5 text-xs font-semibold text-[#6366f1] hover:text-[#4f46e5] transition-colors duration-150"
+                  className="inline-flex items-center gap-1.5 text-xs font-semibold text-[#0075C9] hover:text-[#003F9F] transition-colors duration-150"
                 >
                   View Paper
                   <svg

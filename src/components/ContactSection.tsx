@@ -6,7 +6,7 @@ import { GradientText } from '@/components/reactbits/GradientText';
 import { Sms, DirectboxSend, Link21, Code } from 'iconsax-react';
 
 const DEFAULT_COLOR = '#f8fafc';
-const HOVER_COLOR = '#818cf8';
+const HOVER_COLOR = '#54C0E8';
 
 interface ContactItem {
   label: string;
@@ -62,7 +62,7 @@ function ContactIcon({ item }: { item: ContactItem }) {
         variant={hovered ? 'Bold' : 'Linear'}
         size={28}
       />
-      <span className="text-xs font-body text-slate-400 group-hover:text-[#818cf8] transition-colors duration-150">
+      <span className="text-xs font-body text-slate-400 group-hover:text-[#54C0E8] transition-colors duration-150">
         {item.label}
       </span>
     </motion.a>
@@ -83,7 +83,7 @@ export function ContactSection() {
         })}
       >
         <h2 className="text-3xl font-semibold font-body">
-          <GradientText colors={['#818cf8', '#f8fafc', '#818cf8']} animationSpeed={6}>
+          <GradientText colors={['#54C0E8', '#f8fafc', '#54C0E8']} animationSpeed={6}>
             Let&apos;s connect
           </GradientText>
         </h2>

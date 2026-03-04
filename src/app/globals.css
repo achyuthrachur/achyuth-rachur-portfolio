@@ -7,7 +7,7 @@
 
 /* ══════════════════════════════════════════════════════════════════
    2. shadcn/ui HSL OVERRIDES — Personal Brand Theme
-   Primary: Slate-900 (#0f172a)  Accent: Indigo-500 (#6366f1)
+   Primary: Slate-900 (#0f172a)  Accent: Indigo-500 (#0075C9)
    ══════════════════════════════════════════════════════════════════ */
 @layer base {
   :root {
@@ -19,17 +19,17 @@
     --popover-foreground: 222 47% 11%;
     --primary: 222 47% 11%;             /* #0f172a slate-900 */
     --primary-foreground: 210 40% 98%;
-    --secondary: 239 84% 67%;          /* #6366f1 indigo-500 */
+    --secondary: 207 100% 39%;          /* #0075C9 indigo-500 */
     --secondary-foreground: 0 0% 100%;
     --muted: 214 32% 91%;               /* #e2e8f0 slate-200 */
     --muted-foreground: 215 16% 47%;   /* #64748b slate-500 */
-    --accent: 239 84% 67%;             /* #6366f1 indigo-500 */
+    --accent: 207 100% 39%;             /* #0075C9 indigo-500 */
     --accent-foreground: 0 0% 100%;
     --destructive: 0 84% 60%;
     --destructive-foreground: 0 0% 100%;
     --border: 214 32% 91%;             /* #e2e8f0 slate-200 */
     --input: 214 32% 91%;
-    --ring: 239 84% 67%;               /* #6366f1 indigo-500 */
+    --ring: 207 100% 39%;               /* #0075C9 indigo-500 */
     --radius: 0.75rem;
   }
 }
@@ -44,9 +44,9 @@
   --crowe-indigo-bright: #334155;      /* slate-700 */
 
   /* ── Accent / Pop Color (underlines, CTAs, highlights) ── */
-  --crowe-amber-core: #6366f1;         /* indigo-500 — was Crowe Amber */
-  --crowe-amber-dark: #4f46e5;         /* indigo-600 — hover state */
-  --crowe-amber-bright: #818cf8;       /* indigo-400 — lighter tint */
+  --crowe-amber-core: #0075C9;         /* indigo-500 — was Crowe Amber */
+  --crowe-amber-dark: #003F9F;         /* indigo-600 — hover state */
+  --crowe-amber-bright: #54C0E8;       /* indigo-400 — lighter tint */
 
   /* ── Neutral Tints (slate-based, cool undertone) ── */
   --crowe-white: #FFFFFF;
@@ -73,9 +73,9 @@
   --color-surface-secondary: var(--crowe-tint-50);
   --color-surface-elevated: var(--crowe-white);
   --color-surface-brand: var(--crowe-indigo-dark);
-  --color-surface-brand-soft: #eef2ff;   /* indigo-50 — replaces indigo wash */
+  --color-surface-brand-soft: #eff6ff;   /* indigo-50 — replaces indigo wash */
   --color-surface-accent: var(--crowe-amber-core);
-  --color-surface-amber-soft: #eef2ff;   /* indigo-50 — replaces amber soft */
+  --color-surface-amber-soft: #eff6ff;   /* indigo-50 — replaces amber soft */
 
   --color-accent-primary: var(--crowe-amber-core);
   --color-accent-primary-hover: var(--crowe-amber-dark);
@@ -123,9 +123,9 @@
   --color-crowe-indigo-bright: #334155;
 
   /* ── Accent Scale (indigo) ── */
-  --color-crowe-amber-bright: #818cf8;
-  --color-crowe-amber: #6366f1;
-  --color-crowe-amber-dark: #4f46e5;
+  --color-crowe-amber-bright: #54C0E8;
+  --color-crowe-amber: #0075C9;
+  --color-crowe-amber-dark: #003F9F;
 
   /* ── Neutral Tint Scale (slate) ── */
   --color-tint-950: #020617;
@@ -140,8 +140,8 @@
   /* ── Background Aliases ── */
   --color-page: #f8fafc;
   --color-section: #f1f5f9;
-  --color-section-warm: #eef2ff;       /* indigo-50 wash */
-  --color-section-amber: #eef2ff;      /* alias — same indigo-50 */
+  --color-section-warm: #eff6ff;       /* indigo-50 wash */
+  --color-section-amber: #eff6ff;      /* alias — same indigo-50 */
 
   /* ── Font Families — Inter via @fontsource-variable/inter ── */
   --font-display: 'Inter Variable', 'Inter', system-ui, -apple-system, sans-serif;
@@ -155,7 +155,7 @@
   --shadow-crowe-xl: 0 12px 32px -8px rgba(15, 23, 42, 0.08), 0 8px 16px -4px rgba(15, 23, 42, 0.03);
   --shadow-crowe-hover: 0 8px 24px -4px rgba(15, 23, 42, 0.10), 0 4px 8px -2px rgba(15, 23, 42, 0.04);
   --shadow-crowe-card: 0 1px 3px rgba(15, 23, 42, 0.04), 0 6px 16px rgba(15, 23, 42, 0.04), 0 12px 32px rgba(15, 23, 42, 0.02);
-  --shadow-amber-glow: 0 4px 16px rgba(99, 102, 241, 0.25);  /* indigo glow */
+  --shadow-amber-glow: 0 4px 16px rgba(0, 117, 201, 0.25);  /* indigo glow */
 }
 
 /* ══════════════════════════════════════════════════════════════════
@@ -217,9 +217,9 @@ nav {
 
 /* Timeline dot pulse — fires once on scroll-in */
 @keyframes dot-pulse {
-  0%   { box-shadow: 0 0 0 0 rgba(99,102,241,0.6); }
-  70%  { box-shadow: 0 0 0 8px rgba(99,102,241,0); }
-  100% { box-shadow: 0 0 0 0 rgba(99,102,241,0); }
+  0%   { box-shadow: 0 0 0 0 rgba(0,117,201,0.6); }
+  70%  { box-shadow: 0 0 0 8px rgba(0,117,201,0); }
+  100% { box-shadow: 0 0 0 0 rgba(0,117,201,0); }
 }
 .dot-pulse {
   animation: dot-pulse 0.8s ease-out forwards;

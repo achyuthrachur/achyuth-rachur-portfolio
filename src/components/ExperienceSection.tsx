@@ -10,7 +10,7 @@ import { useTheme } from '@/components/ThemeProvider';
 
 function Highlight({ children }: { children: string }) {
   return (
-    <span className="bg-[#eef2ff] dark:bg-[#312e81]/40 text-[#4f46e5] dark:text-[#818cf8] font-semibold px-1 rounded-sm">
+    <span className="bg-[#eff6ff] dark:bg-[#002E62]/40 text-[#003F9F] dark:text-[#54C0E8] font-semibold px-1 rounded-sm">
       {children}
     </span>
   );
@@ -60,7 +60,7 @@ export function ExperienceSection() {
     <div className="max-w-5xl mx-auto px-6 py-24">
       {/* Section number + heading */}
       <p className="text-xs font-semibold tracking-[0.2em] uppercase font-body mb-1">
-        <DecryptedText text="01 · EXPERIENCE" className="text-[#6366f1]" speed={30} />
+        <DecryptedText text="01 · EXPERIENCE" className="text-[#0075C9]" speed={30} />
       </p>
       <h2 className="text-2xl font-semibold font-body">
         <ShinyText text="Crowe LLP" as="span" baseColor={headingColor} shineColor="rgba(255,255,255,0.85)" speed={6} />
@@ -72,7 +72,7 @@ export function ExperienceSection() {
       {/* Timeline */}
       <div className="relative">
         {/* Vertical line */}
-        <div className="absolute left-0 top-2 bottom-2 w-px bg-[#6366f1] opacity-25" />
+        <div className="absolute left-0 top-2 bottom-2 w-px bg-[#0075C9] opacity-25" />
 
         <div ref={containerRef} className="flex flex-col gap-4 pl-8">
           {[
@@ -111,12 +111,12 @@ export function ExperienceSection() {
           ].map((content, i) => (
             <div key={i} className="relative">
               {/* Timeline dot — pulse triggered by parent card animation */}
-              <div className="exp-dot absolute -left-8 top-5 w-2.5 h-2.5 rounded-full bg-[#6366f1] ring-2 ring-[#f1f5f9] dark:ring-[#111827]" />
+              <div className="exp-dot absolute -left-8 top-5 w-2.5 h-2.5 rounded-full bg-[#0075C9] ring-2 ring-[#f1f5f9] dark:ring-[#111827]" />
               <TiltedCard
                 tiltMaxAngleX={4}
                 tiltMaxAngleY={6}
                 glareEnable={true}
-                glareColor="rgba(99,102,241,0.6)"
+                glareColor="rgba(0,117,201,0.6)"
                 glareMaxOpacity={0.08}
                 scale={1.01}
                 transitionSpeed={300}
@@ -124,7 +124,7 @@ export function ExperienceSection() {
               >
                 <SpotlightCard
                   className="p-6 dark:bg-[#1e293b] dark:border dark:border-[rgba(255,255,255,0.06)]"
-                  spotlightColor="rgba(99,102,241,0.08)"
+                  spotlightColor="rgba(0,117,201,0.08)"
                 >
                   {content}
                 </SpotlightCard>

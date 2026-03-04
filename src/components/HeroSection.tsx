@@ -38,7 +38,7 @@ export function HeroSection() {
       className="hero-grain relative min-h-screen bg-[#0f172a] flex items-center overflow-hidden"
     >
       <Aurora
-        colorStops={['#0f172a', '#1e293b', '#312e81']}
+        colorStops={['#0f172a', '#1e293b', '#002E62']}
         blend={0.3}
         amplitude={1.0}
         speed={0.5}
@@ -75,7 +75,7 @@ export function HeroSection() {
         </div>
         <div className="overflow-hidden">
           <motion.p
-            className="font-display font-black text-[clamp(3.5rem,12vw,6rem)] text-[#6366f1] whitespace-nowrap leading-none tracking-tight"
+            className="font-display font-black text-[clamp(3.5rem,12vw,6rem)] text-[#0075C9] whitespace-nowrap leading-none tracking-tight"
             initial={prefersReduced ? false : { y: '100%', opacity: 0 }}
             animate={{ y: 0, opacity: 1 }}
             transition={prefersReduced ? { duration: 0 } : { delay: 0.08, duration: 0.6, ease: [0.16, 1, 0.3, 1] }}
@@ -86,7 +86,7 @@ export function HeroSection() {
 
         {/* Accent underline */}
         <motion.div
-          className="h-0.5 rounded-full bg-[#6366f1] mt-4 mb-6"
+          className="h-0.5 rounded-full bg-[#0075C9] mt-4 mb-6"
           initial={prefersReduced ? false : { width: 0 }}
           animate={{ width: '4rem' }}
           transition={prefersReduced ? { duration: 0 } : { delay: 0.4, duration: 0.6, ease: [0.16, 1, 0.3, 1] }}

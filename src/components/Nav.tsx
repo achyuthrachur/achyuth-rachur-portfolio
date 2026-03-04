@@ -47,7 +47,7 @@ function MagneticButton({ href }: { href: string }) {
       onMouseLeave={onMouseLeave}
       animate={{ x: offset.x, y: offset.y }}
       transition={prefersReduced ? { duration: 0 } : { type: 'spring', stiffness: 300, damping: 20 }}
-      className="bg-[#6366f1] text-white rounded-md px-4 py-1.5 text-sm font-semibold hover:bg-[#4f46e5] transition-colors duration-150 inline-block"
+      className="bg-[#0075C9] text-white rounded-md px-4 py-1.5 text-sm font-semibold hover:bg-[#003F9F] transition-colors duration-150 inline-block"
     >
       Contact
     </motion.a>
@@ -102,7 +102,7 @@ export function Nav() {
       <nav className="sticky top-0 z-50 h-16 backdrop-blur-[16px] border-b border-[rgba(15,23,42,0.06)] dark:border-[rgba(255,255,255,0.06)] transition-colors duration-200">
         {/* Scroll progress bar */}
         <motion.div
-          className="absolute bottom-0 left-0 right-0 h-[2px] bg-[#6366f1] origin-left z-10"
+          className="absolute bottom-0 left-0 right-0 h-[2px] bg-[#0075C9] origin-left z-10"
           style={{ scaleX: prefersReduced ? 0 : scaleX }}
         />
 
@@ -130,7 +130,7 @@ export function Nav() {
                   {isActive && (
                     <motion.div
                       layoutId={prefersReduced ? undefined : 'nav-underline'}
-                      className="absolute bottom-0 left-0 right-0 h-0.5 bg-[#6366f1] rounded-full"
+                      className="absolute bottom-0 left-0 right-0 h-0.5 bg-[#0075C9] rounded-full"
                       transition={prefersReduced ? { duration: 0 } : { type: 'spring', stiffness: 380, damping: 30 }}
                     />
                   )}
@@ -142,7 +142,7 @@ export function Nav() {
             <button
               onClick={toggle}
               aria-label="Toggle dark mode"
-              className="p-1.5 rounded-md hover:bg-[rgba(99,102,241,0.08)] transition-colors duration-150"
+              className="p-1.5 rounded-md hover:bg-[rgba(0,117,201,0.08)] transition-colors duration-150"
             >
               {theme === 'dark'
                 ? <Sun1 variant="Linear" size={18} color="#94a3b8" />
@@ -183,7 +183,7 @@ export function Nav() {
           ))}
           <a
             href="#contact"
-            className="bg-[#6366f1] text-white rounded-md px-4 py-1.5 text-sm font-semibold text-center hover:bg-[#4f46e5] transition-colors"
+            className="bg-[#0075C9] text-white rounded-md px-4 py-1.5 text-sm font-semibold text-center hover:bg-[#003F9F] transition-colors"
             onClick={() => setMobileOpen(false)}
           >
             Contact
@@ -213,7 +213,7 @@ export function Nav() {
               </span>
               {/* Dot */}
               <motion.span
-                className="block rounded-full bg-[#6366f1] flex-shrink-0"
+                className="block rounded-full bg-[#0075C9] flex-shrink-0"
                 animate={{ width: isActive ? 20 : 6, height: isActive ? 6 : 6, opacity: isActive ? 1 : 0.35 }}
                 transition={prefersReduced ? { duration: 0 } : { duration: 0.25, ease: [0.16, 1, 0.3, 1] }}
               />

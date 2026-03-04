@@ -11,7 +11,7 @@ interface CursorGlowProps {
 }
 
 export function CursorGlow({
-  color = 'rgba(99,102,241,0.12)',
+  color = 'rgba(0,117,201,0.12)',
   sectionIds = ['hero', 'contact'],
 }: CursorGlowProps) {
   const prefersReduced = useReducedMotion();

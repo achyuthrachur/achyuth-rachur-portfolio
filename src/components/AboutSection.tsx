@@ -21,7 +21,7 @@ export function AboutSection() {
         })}
       >
         <p className="text-xs font-semibold tracking-[0.2em] uppercase font-body mb-1">
-          <DecryptedText text="ABOUT" className="text-[#6366f1]" speed={35} />
+          <DecryptedText text="ABOUT" className="text-[#0075C9]" speed={35} />
         </p>
         <h2 className="text-3xl font-semibold font-body">
           <ShinyText
@@ -33,7 +33,7 @@ export function AboutSection() {
           />
         </h2>
         <motion.div
-          className="h-0.5 bg-[#6366f1] rounded-full mt-2 mb-8"
+          className="h-0.5 bg-[#0075C9] rounded-full mt-2 mb-8"
           {...(prefersReduced ? {} : {
             initial: { width: 0 },
             whileInView: { width: '3rem' },
