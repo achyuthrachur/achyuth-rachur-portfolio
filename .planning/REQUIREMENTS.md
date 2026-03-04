@@ -7,8 +7,8 @@
 
 ### Project Scaffold
 
-- [ ] **SCAF-01**: Project is scaffolded with Next.js 14+ App Router, TypeScript, Tailwind CSS, src/ directory structure
-- [ ] **SCAF-02**: Static export configured (output: "export", images: { unoptimized: true }) for Cloudflare Pages
+- [x] **SCAF-01**: Project is scaffolded with Next.js 14+ App Router, TypeScript, Tailwind CSS, src/ directory structure
+- [x] **SCAF-02**: Static export configured (output: "export", images: { unoptimized: true }) for Cloudflare Pages
 - [ ] **SCAF-03**: shadcn/ui initialized with Crowe theme overrides (DESIGN.md Section 3 HSL tokens in globals.css)
 - [ ] **SCAF-04**: Tailwind config extended with full Crowe color tokens, tint scale, shadow system, font families, and backgroundColor aliases
 - [ ] **SCAF-05**: animejs, framer-motion, iconsax-react installed
@@ -120,8 +120,8 @@ Which phases cover which requirements. Updated during roadmap creation.
 
 | Requirement | Phase | Status |
 |-------------|-------|--------|
-| SCAF-01 | Phase 1 — Foundation | Pending |
-| SCAF-02 | Phase 1 — Foundation | Pending |
+| SCAF-01 | Phase 1 — Foundation | Complete |
+| SCAF-02 | Phase 1 — Foundation | Complete |
 | SCAF-03 | Phase 1 — Foundation | Pending |
 | SCAF-04 | Phase 1 — Foundation | Pending |
 | SCAF-05 | Phase 1 — Foundation | Pending |
