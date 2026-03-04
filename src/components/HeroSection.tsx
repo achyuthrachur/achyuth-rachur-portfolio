@@ -46,21 +46,6 @@ export function HeroSection() {
 
       <div className="relative z-10 max-w-5xl w-full mx-auto px-6 py-24">
 
-        {/* Available badge */}
-        <motion.div
-          className="inline-flex items-center gap-2 mb-8"
-          initial={prefersReduced ? false : { opacity: 0, y: -8 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={prefersReduced ? { duration: 0 } : { duration: 0.5, ease: [0.16, 1, 0.3, 1] }}
-        >
-          <span className="relative flex h-2 w-2">
-            <span className="status-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75" />
-            <span className="relative inline-flex h-2 w-2 rounded-full bg-emerald-400" />
-          </span>
-          <span className="text-[0.65rem] tracking-[0.2em] uppercase font-semibold font-body text-[rgba(246,247,250,0.5)]">
-            Open to Opportunities
-          </span>
-        </motion.div>
 
         {/* Stacked display name */}
         <div className="overflow-hidden">
