@@ -35,7 +35,7 @@ export function HeroSection() {
   return (
     <section
       id="hero"
-      className="relative min-h-screen bg-[#0f172a] flex items-center overflow-hidden"
+      className="hero-grain relative min-h-screen bg-[#0f172a] flex items-center overflow-hidden"
     >
       <Aurora
         colorStops={['#0f172a', '#1e293b', '#312e81']}
@@ -45,7 +45,24 @@ export function HeroSection() {
       />
 
       <div className="relative z-10 max-w-5xl w-full mx-auto px-6 py-24">
-        {/* Stacked display name — each word on its own line, no wrapping */}
+
+        {/* Available badge */}
+        <motion.div
+          className="inline-flex items-center gap-2 mb-8"
+          initial={prefersReduced ? false : { opacity: 0, y: -8 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={prefersReduced ? { duration: 0 } : { duration: 0.5, ease: [0.16, 1, 0.3, 1] }}
+        >
+          <span className="relative flex h-2 w-2">
+            <span className="status-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75" />
+            <span className="relative inline-flex h-2 w-2 rounded-full bg-emerald-400" />
+          </span>
+          <span className="text-[0.65rem] tracking-[0.2em] uppercase font-semibold font-body text-[rgba(246,247,250,0.5)]">
+            Open to Opportunities
+          </span>
+        </motion.div>
+
+        {/* Stacked display name */}
         <div className="overflow-hidden">
           <motion.p
             className="font-display font-black text-[clamp(3.5rem,12vw,6rem)] text-[#f6f7fa] whitespace-nowrap leading-none tracking-tight"
@@ -95,24 +112,25 @@ export function HeroSection() {
           Helping financial institutions design, deploy, and govern AI that works.
         </motion.p>
 
-        {/* Stats row */}
-        <motion.div
-          className="flex flex-wrap items-center gap-x-4 gap-y-2"
-          initial={prefersReduced ? false : { opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={prefersReduced ? { duration: 0 } : { delay: 0.8, duration: 0.5 }}
-        >
+        {/* Stats row — staggered per item */}
+        <div className="flex flex-wrap items-center gap-x-4 gap-y-2">
           {STATS.map((stat, i) => (
-            <span key={stat} className="flex items-center gap-4">
+            <motion.span
+              key={stat}
+              className="flex items-center gap-4"
+              initial={prefersReduced ? false : { opacity: 0, y: 8 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={prefersReduced ? { duration: 0 } : { delay: 0.8 + i * 0.12, duration: 0.4, ease: [0.16, 1, 0.3, 1] }}
+            >
               {i > 0 && (
                 <span className="text-[rgba(246,247,250,0.2)] select-none" aria-hidden>·</span>
               )}
               <span className="text-[0.7rem] tracking-[0.18em] uppercase font-semibold font-body text-[rgba(246,247,250,0.45)]">
                 {stat}
               </span>
-            </span>
+            </motion.span>
           ))}
-        </motion.div>
+        </div>
       </div>
 
       {/* Scroll indicator */}

@@ -3,6 +3,9 @@
 import { motion, useReducedMotion } from 'motion/react';
 import { TiltedCard } from '@/components/reactbits/TiltedCard';
 import { SpotlightCard } from '@/components/reactbits/SpotlightCard';
+import { ShinyText } from '@/components/reactbits/ShinyText';
+import { DecryptedText } from '@/components/reactbits/DecryptedText';
+import { useTheme } from '@/components/ThemeProvider';
 
 interface ResearchPaper {
   title: string;
@@ -28,6 +31,8 @@ const researchPapers: ResearchPaper[] = [
 
 export function EducationSection() {
   const prefersReduced = useReducedMotion();
+  const { theme } = useTheme();
+  const headingColor = theme === 'dark' ? '#f6f7fa' : '#0f172a';
 
   return (
     <div className="max-w-5xl mx-auto px-6 py-24">
@@ -40,10 +45,12 @@ export function EducationSection() {
           transition: { duration: 0.6, ease: [0.16, 1, 0.3, 1] },
         })}
       >
-        <p className="text-xs font-semibold tracking-[0.2em] uppercase text-[#6366f1] font-body mb-1">
-          03 · Education
+        <p className="text-xs font-semibold tracking-[0.2em] uppercase font-body mb-1">
+          <DecryptedText text="03 · EDUCATION" className="text-[#6366f1]" speed={30} />
         </p>
-        <h2 className="text-3xl font-semibold text-tint-900 dark:text-[#f6f7fa] font-body">Education</h2>
+        <h2 className="text-3xl font-semibold font-body">
+          <ShinyText text="Education" as="span" baseColor={headingColor} shineColor="rgba(255,255,255,0.85)" speed={6} />
+        </h2>
         <motion.div
           className="h-0.5 bg-[#6366f1] rounded-full mt-2 mb-8"
           {...(prefersReduced ? {} : {

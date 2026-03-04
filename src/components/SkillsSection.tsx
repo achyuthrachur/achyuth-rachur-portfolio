@@ -1,6 +1,9 @@
 'use client';
 
 import { AnimatedList } from '@/components/reactbits/AnimatedList';
+import { ShinyText } from '@/components/reactbits/ShinyText';
+import { DecryptedText } from '@/components/reactbits/DecryptedText';
+import { useTheme } from '@/components/ThemeProvider';
 
 const SKILL_GROUPS = [
   {
@@ -43,6 +46,9 @@ const SKILL_GROUPS = [
   },
 ];
 
+// Flat list for the marquee ticker
+const ALL_SKILLS = SKILL_GROUPS.flatMap((g) => g.skills);
+
 interface SkillGroupProps {
   title: string;
   skills: string[];
@@ -68,17 +74,36 @@ function SkillGroup({ title, skills }: SkillGroupProps) {
 }
 
 export function SkillsSection() {
+  const { theme } = useTheme();
+  const headingColor = theme === 'dark' ? '#f6f7fa' : '#0f172a';
+
   return (
     <div className="max-w-5xl mx-auto px-6 py-24">
-      <p className="text-xs font-semibold tracking-[0.2em] uppercase text-[#6366f1] font-body mb-1">
-        02 · Skills
+      <p className="text-xs font-semibold tracking-[0.2em] uppercase font-body mb-1">
+        <DecryptedText text="02 · SKILLS" className="text-[#6366f1]" speed={30} />
       </p>
-      <h2 className="text-3xl font-semibold text-tint-900 dark:text-[#f6f7fa] font-body mb-2">Skills</h2>
+      <h2 className="text-3xl font-semibold font-body mb-2">
+        <ShinyText text="Skills" as="span" baseColor={headingColor} shineColor="rgba(255,255,255,0.85)" speed={6} />
+      </h2>
       <div className="h-0.5 w-12 bg-[#6366f1] rounded-full mb-10" />
       <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
         {SKILL_GROUPS.map((group) => (
           <SkillGroup key={group.title} title={group.title} skills={group.skills} />
         ))}
+      </div>
+
+      {/* Marquee ticker — all skills in one infinite scroll */}
+      <div className="mt-16 overflow-hidden">
+        <div className="flex gap-3 marquee-track w-max">
+          {[...ALL_SKILLS, ...ALL_SKILLS].map((skill, i) => (
+            <span
+              key={i}
+              className="flex-shrink-0 bg-white dark:bg-[#1e293b] text-tint-500 dark:text-[#64748b] border border-[rgba(99,102,241,0.15)] rounded-full px-4 py-1.5 text-xs font-medium font-body whitespace-nowrap"
+            >
+              {skill}
+            </span>
+          ))}
+        </div>
       </div>
     </div>
   );

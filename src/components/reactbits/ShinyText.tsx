@@ -6,6 +6,9 @@ interface ShinyTextProps {
   speed?: number;
   className?: string;
   shimmerWidth?: number;
+  baseColor?: string;
+  shineColor?: string;
+  as?: 'p' | 'span' | 'h1' | 'h2' | 'h3';
 }
 
 export function ShinyText({
@@ -14,23 +17,26 @@ export function ShinyText({
   speed = 5,
   className = '',
   shimmerWidth = 100,
+  baseColor = '#f6f7fa',
+  shineColor = 'rgba(255,255,255,0.9)',
+  as: Tag = 'span',
 }: ShinyTextProps) {
   const animationDuration = `${speed}s`;
 
   return (
-    <p
+    <Tag
       className={`inline-flex items-center bg-clip-text text-transparent ${
         disabled ? '' : 'animate-shiny-text'
       } ${className}`}
       style={
         disabled
-          ? {}
+          ? { color: baseColor }
           : {
               backgroundImage: `linear-gradient(
                 120deg,
-                rgba(245,168,0,0) 40%,
-                rgba(245,168,0,0.8) 50%,
-                rgba(245,168,0,0) 60%
+                ${baseColor} 40%,
+                ${shineColor} 50%,
+                ${baseColor} 60%
               )`,
               backgroundSize: `${shimmerWidth}% 100%`,
               backgroundRepeat: 'no-repeat',
@@ -52,6 +58,6 @@ export function ShinyText({
           }
         `}</style>
       )}
-    </p>
+    </Tag>
   );
 }

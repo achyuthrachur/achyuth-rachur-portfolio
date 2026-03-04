@@ -200,3 +200,52 @@ nav {
 .dark nav {
   background-color: rgba(13, 17, 23, var(--nav-opacity, 0.92));
 }
+
+/* ══════════════════════════════════════════════════════════════════
+   8. HERO ANIMATIONS
+   ══════════════════════════════════════════════════════════════════ */
+
+/* Available badge pulse */
+@keyframes status-ping {
+  0%   { transform: scale(1);   opacity: 1; }
+  75%  { transform: scale(2.2); opacity: 0; }
+  100% { transform: scale(2.2); opacity: 0; }
+}
+.status-ping {
+  animation: status-ping 1.8s cubic-bezier(0, 0, 0.2, 1) infinite;
+}
+
+/* Timeline dot pulse — fires once on scroll-in */
+@keyframes dot-pulse {
+  0%   { box-shadow: 0 0 0 0 rgba(99,102,241,0.6); }
+  70%  { box-shadow: 0 0 0 8px rgba(99,102,241,0); }
+  100% { box-shadow: 0 0 0 0 rgba(99,102,241,0); }
+}
+.dot-pulse {
+  animation: dot-pulse 0.8s ease-out forwards;
+}
+
+/* Skills marquee */
+@keyframes marquee-scroll {
+  0%   { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+.marquee-track {
+  animation: marquee-scroll 30s linear infinite;
+}
+.marquee-track:hover {
+  animation-play-state: paused;
+}
+
+/* Hero grain overlay */
+.hero-grain::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  z-index: 5;
+  opacity: 0.035;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)'/%3E%3C/svg%3E");
+  background-repeat: repeat;
+  background-size: 128px 128px;
+}

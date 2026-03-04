@@ -3,6 +3,10 @@
 import { useEffect, useRef } from 'react';
 import { animate, stagger } from 'animejs';
 import { SpotlightCard } from '@/components/reactbits/SpotlightCard';
+import { TiltedCard } from '@/components/reactbits/TiltedCard';
+import { ShinyText } from '@/components/reactbits/ShinyText';
+import { DecryptedText } from '@/components/reactbits/DecryptedText';
+import { useTheme } from '@/components/ThemeProvider';
 
 function Highlight({ children }: { children: string }) {
   return (
@@ -14,6 +18,8 @@ function Highlight({ children }: { children: string }) {
 
 export function ExperienceSection() {
   const containerRef = useRef<HTMLDivElement>(null);
+  const { theme } = useTheme();
+  const headingColor = theme === 'dark' ? '#f6f7fa' : '#0f172a';
 
   useEffect(() => {
     const prefersReduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
@@ -35,6 +41,11 @@ export function ExperienceSection() {
             delay: stagger(100),
             ease: 'outQuint',
           });
+          // Stagger pulse on timeline dots
+          const dots = container.querySelectorAll<HTMLElement>('.exp-dot');
+          dots.forEach((dot, idx) => {
+            setTimeout(() => dot.classList.add('dot-pulse'), idx * 100);
+          });
           observer.disconnect();
         }
       },
@@ -48,11 +59,11 @@ export function ExperienceSection() {
   return (
     <div className="max-w-5xl mx-auto px-6 py-24">
       {/* Section number + heading */}
-      <p className="text-xs font-semibold tracking-[0.2em] uppercase text-[#6366f1] font-body mb-1">
-        01 · Experience
+      <p className="text-xs font-semibold tracking-[0.2em] uppercase font-body mb-1">
+        <DecryptedText text="01 · EXPERIENCE" className="text-[#6366f1]" speed={30} />
       </p>
-      <h2 className="text-2xl font-semibold text-tint-900 dark:text-[#f6f7fa] font-body">
-        Crowe LLP
+      <h2 className="text-2xl font-semibold font-body">
+        <ShinyText text="Crowe LLP" as="span" baseColor={headingColor} shineColor="rgba(255,255,255,0.85)" speed={6} />
       </h2>
       <p className="text-sm text-tint-500 dark:text-[#64748b] mt-1 mb-10 font-body">
         Staff Consultant | AI Enablement & Integrated Risk Management · Feb 2025 – Present
@@ -99,14 +110,25 @@ export function ExperienceSection() {
             </p>,
           ].map((content, i) => (
             <div key={i} className="relative">
-              {/* Timeline dot */}
-              <div className="absolute -left-8 top-5 w-2.5 h-2.5 rounded-full bg-[#6366f1] ring-2 ring-[#f1f5f9] dark:ring-[#111827]" />
-              <SpotlightCard
-                className="exp-card p-6 dark:bg-[#1e293b] dark:border dark:border-[rgba(255,255,255,0.06)]"
-                spotlightColor="rgba(99,102,241,0.08)"
+              {/* Timeline dot — pulse triggered by parent card animation */}
+              <div className="exp-dot absolute -left-8 top-5 w-2.5 h-2.5 rounded-full bg-[#6366f1] ring-2 ring-[#f1f5f9] dark:ring-[#111827]" />
+              <TiltedCard
+                tiltMaxAngleX={4}
+                tiltMaxAngleY={6}
+                glareEnable={true}
+                glareColor="rgba(99,102,241,0.6)"
+                glareMaxOpacity={0.08}
+                scale={1.01}
+                transitionSpeed={300}
+                className="exp-card"
               >
-                {content}
-              </SpotlightCard>
+                <SpotlightCard
+                  className="p-6 dark:bg-[#1e293b] dark:border dark:border-[rgba(255,255,255,0.06)]"
+                  spotlightColor="rgba(99,102,241,0.08)"
+                >
+                  {content}
+                </SpotlightCard>
+              </TiltedCard>
             </div>
           ))}
         </div>

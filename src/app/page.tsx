@@ -6,10 +6,12 @@ import { SkillsSection } from '@/components/SkillsSection';
 import { EducationSection } from '@/components/EducationSection';
 import { ContactSection } from '@/components/ContactSection';
 import { Footer } from '@/components/Footer';
+import { CursorGlow } from '@/components/CursorGlow';
 
 export default function Home() {
   return (
     <main>
+      <CursorGlow color="rgba(99,102,241,0.10)" sectionIds={['hero', 'contact']} />
       <Nav />
       <HeroSection />
 
