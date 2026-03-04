@@ -92,7 +92,12 @@ Plans:
   3. The layout renders correctly on mobile (375px), tablet (768px), and desktop (1280px) viewports
   4. Lighthouse scores for Performance and Accessibility are both above 90 with no console errors
   5. The site is live and publicly accessible via a Cloudflare Pages URL after GitHub push
-**Plans**: TBD
+**Plans**: 3 plans
+
+Plans:
+- [ ] 05-01-PLAN.md — DSGN compliance: add useReducedMotion to 7 components, remove Footer border-t, run grep audit
+- [ ] 05-02-PLAN.md — Quality gates: verify build, console errors, Lighthouse >= 90, responsive at 375/768/1280px
+- [ ] 05-03-PLAN.md — Deploy: create GitHub repo, push master, connect Cloudflare Pages, verify live URL
 
 ## Progress
 
@@ -104,5 +109,5 @@ Phases execute in numeric order: 1 → 2 → 3 → 4 → 5
 | 1. Foundation | 3/3 | Complete    | 2026-03-04 |
 | 2. Hero + Navigation | 3/3 | Complete    | 2026-03-04 |
 | 3. Content Sections | 4/4 | Complete    | 2026-03-04 |
-| 4. Closing Sections | 2/3 | In Progress|  |
-| 5. Polish + Deploy | 0/TBD | Not started | - |
+| 4. Closing Sections | 3/3 | Complete    | 2026-03-04 |
+| 5. Polish + Deploy | 0/3 | Not started | - |
