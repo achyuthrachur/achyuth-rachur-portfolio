@@ -3,14 +3,14 @@ gsd_state_version: 1.0
 milestone: v1.0
 milestone_name: milestone
 status: planning
-stopped_at: Completed 02-hero-navigation/02-02-PLAN.md
-last_updated: "2026-03-04T04:03:11.326Z"
+stopped_at: "Checkpoint: 02-hero-navigation/02-03 awaiting human visual verify"
+last_updated: "2026-03-04T14:36:33.578Z"
 last_activity: 2026-03-03 — Roadmap created, 5 phases derived from 41 v1 requirements
 progress:
   total_phases: 5
-  completed_phases: 1
+  completed_phases: 2
   total_plans: 6
-  completed_plans: 5
+  completed_plans: 6
   percent: 0
 ---
 
@@ -83,6 +83,8 @@ Recent decisions affecting current work:
 - [Phase 02-hero-navigation]: IntersectionObserver null guard required — #about/#experience/#skills/#education/#contact sections built in Phase 3
 - [Phase 02-hero-navigation]: anim.cancel() wrapped in block statement for EffectCallback void return compliance
 - [Phase 02-hero-navigation]: Aurora colorStops overridden to indigo-only — removes default amber stop that clashes with hero bg
+- [Phase 02-hero-navigation]: page.tsx stays as server component — only imports client components, no use client directive needed
+- [Phase 02-hero-navigation]: scroll-mt-16 pattern: all anchor sections must carry this class to compensate for h-16 sticky nav
 
 ### Pending Todos
 
@@ -94,6 +96,6 @@ None yet.
 
 ## Session Continuity
 
-Last session: 2026-03-04T04:03:11.320Z
-Stopped at: Completed 02-hero-navigation/02-02-PLAN.md
+Last session: 2026-03-04T14:36:24.215Z
+Stopped at: Checkpoint: 02-hero-navigation/02-03 awaiting human visual verify
 Resume file: None
