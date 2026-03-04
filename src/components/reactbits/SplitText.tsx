@@ -1,7 +1,7 @@
 'use client';
 
 import { useRef, useEffect } from 'react';
-import { motion, useInView, useAnimation, type Variants, type Easing } from 'motion/react';
+import { motion, useInView, useAnimation, useReducedMotion, type Variants, type Easing } from 'motion/react';
 
 interface SplitTextProps {
   text: string;
@@ -35,14 +35,19 @@ export function SplitText({
   const controls = useAnimation();
   const ref = useRef<HTMLParagraphElement>(null);
   const inView = useInView(ref, { once: true, margin: rootMargin as `${number}px`, amount: threshold });
+  const prefersReduced = useReducedMotion();
 
   useEffect(() => {
+    if (prefersReduced) {
+      controls.set('visible');
+      return;
+    }
     if (inView) {
       controls.start('visible').then(() => {
         onLetterAnimationComplete?.();
       });
     }
-  }, [inView, controls, onLetterAnimationComplete]);
+  }, [inView, controls, prefersReduced, onLetterAnimationComplete]);
 
   const tokens =
     splitBy === 'words'

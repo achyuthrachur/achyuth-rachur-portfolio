@@ -1,7 +1,7 @@
 'use client';
 
 import { useState } from 'react';
-import { motion } from 'motion/react';
+import { motion, useReducedMotion } from 'motion/react';
 import { GradientText } from '@/components/reactbits/GradientText';
 import { Sms, DirectboxSend, Link21, Code } from 'iconsax-react';
 
@@ -44,6 +44,7 @@ const CONTACTS: ContactItem[] = [
 
 function ContactIcon({ item }: { item: ContactItem }) {
   const [hovered, setHovered] = useState(false);
+  const prefersReduced = useReducedMotion();
   const color = hovered ? HOVER_COLOR : DEFAULT_COLOR;
 
   return (
@@ -53,7 +54,7 @@ function ContactIcon({ item }: { item: ContactItem }) {
       className="flex flex-col items-center gap-2 group"
       onHoverStart={() => setHovered(true)}
       onHoverEnd={() => setHovered(false)}
-      whileHover={{ scale: 1.1 }}
+      whileHover={prefersReduced ? undefined : { scale: 1.1 }}
       transition={{ duration: 0.15, ease: [0.16, 1, 0.3, 1] }}
     >
       <item.Icon
@@ -69,13 +70,17 @@ function ContactIcon({ item }: { item: ContactItem }) {
 }
 
 export function ContactSection() {
+  const prefersReduced = useReducedMotion();
+
   return (
     <div className="max-w-5xl mx-auto px-6 py-24 text-center">
       <motion.div
-        initial={{ opacity: 0, y: 30 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        viewport={{ once: true, margin: '-100px' }}
-        transition={{ duration: 0.6, ease: [0.16, 1, 0.3, 1] }}
+        {...(prefersReduced ? {} : {
+          initial: { opacity: 0, y: 30 },
+          whileInView: { opacity: 1, y: 0 },
+          viewport: { once: true, margin: '-100px' },
+          transition: { duration: 0.6, ease: [0.16, 1, 0.3, 1] },
+        })}
       >
         <h2 className="text-3xl font-semibold font-body">
           <GradientText colors={['#818cf8', '#f8fafc', '#818cf8']} animationSpeed={6}>
@@ -89,10 +94,12 @@ export function ContactSection() {
           {CONTACTS.map((item, i) => (
             <motion.div
               key={item.label}
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ delay: i * 0.08, duration: 0.5, ease: [0.16, 1, 0.3, 1] }}
+              {...(prefersReduced ? {} : {
+                initial: { opacity: 0, y: 20 },
+                whileInView: { opacity: 1, y: 0 },
+                viewport: { once: true },
+                transition: { delay: i * 0.08, duration: 0.5, ease: [0.16, 1, 0.3, 1] },
+              })}
             >
               <ContactIcon item={item} />
             </motion.div>

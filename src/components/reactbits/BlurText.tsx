@@ -1,7 +1,7 @@
 'use client';
 
 import { useRef, useEffect } from 'react';
-import { motion, useInView, useAnimation, type Variants } from 'motion/react';
+import { motion, useInView, useAnimation, useReducedMotion, type Variants } from 'motion/react';
 
 interface BlurTextProps {
   text: string;
@@ -29,14 +29,19 @@ export function BlurText({
   const controls = useAnimation();
   const ref = useRef<HTMLParagraphElement>(null);
   const inView = useInView(ref, { once: true, margin: rootMargin as `${number}px`, amount: threshold });
+  const prefersReduced = useReducedMotion();
 
   useEffect(() => {
+    if (prefersReduced) {
+      controls.set('visible');
+      return;
+    }
     if (inView) {
       controls.start('visible').then(() => {
         onAnimationComplete?.();
       });
     }
-  }, [inView, controls, onAnimationComplete]);
+  }, [inView, controls, prefersReduced, onAnimationComplete]);
 
   const tokens =
     animateBy === 'words'

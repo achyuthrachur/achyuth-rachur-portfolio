@@ -1,6 +1,6 @@
 'use client';
 
-import { motion } from 'motion/react';
+import { motion, useReducedMotion } from 'motion/react';
 import { TiltedCard } from '@/components/reactbits/TiltedCard';
 import { SpotlightCard } from '@/components/reactbits/SpotlightCard';
 
@@ -27,31 +27,39 @@ const researchPapers: ResearchPaper[] = [
 ];
 
 export function EducationSection() {
+  const prefersReduced = useReducedMotion();
+
   return (
     <div className="max-w-5xl mx-auto px-6 py-24">
       {/* Section heading */}
       <motion.div
-        initial={{ opacity: 0, y: 30 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        viewport={{ once: true, margin: '-100px' }}
-        transition={{ duration: 0.6, ease: [0.16, 1, 0.3, 1] }}
+        {...(prefersReduced ? {} : {
+          initial: { opacity: 0, y: 30 },
+          whileInView: { opacity: 1, y: 0 },
+          viewport: { once: true, margin: '-100px' },
+          transition: { duration: 0.6, ease: [0.16, 1, 0.3, 1] },
+        })}
       >
         <h2 className="text-3xl font-semibold text-crowe-indigo-dark font-body">Education</h2>
         <motion.div
           className="h-0.5 bg-[#6366f1] rounded-full mt-2 mb-8"
-          initial={{ width: 0 }}
-          whileInView={{ width: '3rem' }}
-          viewport={{ once: true }}
-          transition={{ delay: 0.2, duration: 0.5, ease: [0.16, 1, 0.3, 1] }}
+          {...(prefersReduced ? {} : {
+            initial: { width: 0 },
+            whileInView: { width: '3rem' },
+            viewport: { once: true },
+            transition: { delay: 0.2, duration: 0.5, ease: [0.16, 1, 0.3, 1] },
+          })}
         />
       </motion.div>
 
       {/* Degree card */}
       <motion.div
-        initial={{ opacity: 0, y: 30 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        viewport={{ once: true, margin: '-100px' }}
-        transition={{ duration: 0.6, delay: 0.1, ease: [0.16, 1, 0.3, 1] }}
+        {...(prefersReduced ? {} : {
+          initial: { opacity: 0, y: 30 },
+          whileInView: { opacity: 1, y: 0 },
+          viewport: { once: true, margin: '-100px' },
+          transition: { duration: 0.6, delay: 0.1, ease: [0.16, 1, 0.3, 1] },
+        })}
       >
         <TiltedCard
           glareColor="rgba(99, 102, 241, 0.6)"
@@ -77,14 +85,16 @@ export function EducationSection() {
           {researchPapers.map((paper, index) => (
             <motion.div
               key={paper.url}
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true, margin: '-100px' }}
-              transition={{
-                duration: 0.6,
-                delay: 0.1 + index * 0.1,
-                ease: [0.16, 1, 0.3, 1],
-              }}
+              {...(prefersReduced ? {} : {
+                initial: { opacity: 0, y: 30 },
+                whileInView: { opacity: 1, y: 0 },
+                viewport: { once: true, margin: '-100px' },
+                transition: {
+                  duration: 0.6,
+                  delay: 0.1 + index * 0.1,
+                  ease: [0.16, 1, 0.3, 1],
+                },
+              })}
             >
               <SpotlightCard spotlightColor="rgba(99, 102, 241, 0.08)" className="p-6">
                 <p className="text-xs font-body text-tint-500 uppercase tracking-widest mb-2">

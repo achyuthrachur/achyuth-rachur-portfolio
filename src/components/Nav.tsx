@@ -1,7 +1,7 @@
 'use client';
 
 import { useEffect, useState } from 'react';
-import { motion, useScroll, useMotionValueEvent } from 'motion/react';
+import { motion, useScroll, useMotionValueEvent, useReducedMotion } from 'motion/react';
 import { HambergerMenu, CloseCircle } from 'iconsax-react';
 import { cn } from '@/lib/utils';
 
@@ -17,6 +17,7 @@ export function Nav() {
   const [mobileOpen, setMobileOpen] = useState(false);
   const [navBgOpacity, setNavBgOpacity] = useState(0.85);
   const { scrollY } = useScroll();
+  const prefersReduced = useReducedMotion();
 
   useMotionValueEvent(scrollY, 'change', (latest) => {
     const heroHeight = window.innerHeight;
@@ -75,9 +76,9 @@ export function Nav() {
                   {label}
                   {isActive && (
                     <motion.div
-                      layoutId="nav-underline"
+                      layoutId={prefersReduced ? undefined : 'nav-underline'}
                       className="absolute bottom-0 left-0 right-0 h-0.5 bg-[#6366f1] rounded-full"
-                      transition={{ type: 'spring', stiffness: 380, damping: 30 }}
+                      transition={prefersReduced ? { duration: 0 } : { type: 'spring', stiffness: 380, damping: 30 }}
                     />
                   )}
                 </a>

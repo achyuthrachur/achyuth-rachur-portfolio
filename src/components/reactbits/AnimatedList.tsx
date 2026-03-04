@@ -1,7 +1,7 @@
 'use client';
 
 import { useRef, type ReactNode } from 'react';
-import { motion, useInView, type Variants } from 'motion/react';
+import { motion, useInView, useReducedMotion, type Variants } from 'motion/react';
 
 interface AnimatedListProps {
   children: ReactNode;
@@ -27,6 +27,7 @@ export function AnimatedList({
 }: AnimatedListProps) {
   const ref = useRef<HTMLDivElement>(null);
   const inView = useInView(ref, { once: true, margin: rootMargin as `${number}px`, amount: threshold });
+  const prefersReduced = useReducedMotion();
 
   const containerVariants: Variants = {
     hidden: {},
@@ -54,7 +55,7 @@ export function AnimatedList({
       className={className}
       variants={containerVariants}
       initial="hidden"
-      animate={inView ? 'visible' : 'hidden'}
+      animate={prefersReduced || inView ? 'visible' : 'hidden'}
     >
       {Array.isArray(children)
         ? children.map((child, i) => (

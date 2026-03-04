@@ -1,7 +1,7 @@
 'use client';
 
 import { useEffect, useRef } from 'react';
-import { motion, useScroll, useTransform } from 'motion/react';
+import { motion, useScroll, useTransform, useReducedMotion } from 'motion/react';
 import { animate } from 'animejs';
 import { ArrowDown } from 'iconsax-react';
 import { Aurora } from '@/components/reactbits/Aurora';
@@ -12,6 +12,7 @@ export function HeroSection() {
   const scrollIndicatorRef = useRef<HTMLDivElement>(null);
   const { scrollY } = useScroll();
   const indicatorOpacity = useTransform(scrollY, [0, 100], [1, 0]);
+  const prefersReduced = useReducedMotion();
 
   useEffect(() => {
     const prefersReduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
@@ -55,9 +56,9 @@ export function HeroSection() {
         {/* Amber underline brand moment — expands left-to-right at 0.8s */}
         <motion.div
           className="h-1 rounded-full bg-[#6366f1] mt-2 mb-6"
-          initial={{ width: 0 }}
+          initial={prefersReduced ? false : { width: 0 }}
           animate={{ width: '100%' }}
-          transition={{ delay: 0.8, duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
+          transition={prefersReduced ? { duration: 0 } : { delay: 0.8, duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
         />
 
         {/* Subtitle with word-by-word BlurText entrance */}
@@ -73,9 +74,9 @@ export function HeroSection() {
         {/* Tagline paragraph — fades in from below at 0.6s delay */}
         <motion.p
           className="mt-4 text-base md:text-lg font-body text-[rgba(246,247,250,0.55)] max-w-lg"
-          initial={{ opacity: 0, y: 10 }}
+          initial={prefersReduced ? false : { opacity: 0, y: 10 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 0.6, duration: 0.5, ease: [0.16, 1, 0.3, 1] }}
+          transition={prefersReduced ? { duration: 0 } : { delay: 0.6, duration: 0.5, ease: [0.16, 1, 0.3, 1] }}
         >
           Helping financial institutions design, deploy, and govern AI that works.
         </motion.p>
