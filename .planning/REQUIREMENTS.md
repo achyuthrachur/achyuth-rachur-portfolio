@@ -63,16 +63,16 @@
 
 ### Contact Section
 
-- [ ] **CONT-01**: Section background Crowe Indigo Dark (#011E41)
-- [ ] **CONT-02**: "Let's connect" heading via React Bits GradientText — amber-to-indigo spectrum
-- [ ] **CONT-03**: Contact icons in flex row, centered, gap-8: Iconsax Sms (email), Link21 (LinkedIn), Code (GitHub), Call (phone) — variant Linear, color #f6f7fa, size 28
-- [ ] **CONT-04**: Each icon is an anchor (<a>) tag pointing to actual contact URL/handle
-- [ ] **CONT-05**: Hover state: Framer Motion scale(1.05) + color shift to #F5A800 (amber), icon variant switches to Bold
+- [x] **CONT-01**: Section background Crowe Indigo Dark (#011E41)
+- [x] **CONT-02**: "Let's connect" heading via React Bits GradientText — amber-to-indigo spectrum
+- [x] **CONT-03**: Contact icons in flex row, centered, gap-8: Iconsax Sms (email), Link21 (LinkedIn), Code (GitHub), Call (phone) — variant Linear, color #f6f7fa, size 28
+- [x] **CONT-04**: Each icon is an anchor (<a>) tag pointing to actual contact URL/handle
+- [x] **CONT-05**: Hover state: Framer Motion scale(1.05) + color shift to #F5A800 (amber), icon variant switches to Bold
 
 ### Footer
 
-- [ ] **FOOT-01**: Indigo Dark background, py-6
-- [ ] **FOOT-02**: "© 2025 Achyuth Rachur" centered, color #8b90a0 (muted), small text
+- [x] **FOOT-01**: Indigo Dark background, py-6
+- [x] **FOOT-02**: "© 2025 Achyuth Rachur" centered, color #8b90a0 (muted), small text
 
 ### Design Compliance
 
@@ -155,13 +155,13 @@ Which phases cover which requirements. Updated during roadmap creation.
 | EDU-02 | Phase 4 — Closing Sections | Complete |
 | EDU-03 | Phase 4 — Closing Sections | Complete |
 | EDU-04 | Phase 4 — Closing Sections | Complete |
-| CONT-01 | Phase 4 — Closing Sections | Pending |
-| CONT-02 | Phase 4 — Closing Sections | Pending |
-| CONT-03 | Phase 4 — Closing Sections | Pending |
-| CONT-04 | Phase 4 — Closing Sections | Pending |
-| CONT-05 | Phase 4 — Closing Sections | Pending |
-| FOOT-01 | Phase 4 — Closing Sections | Pending |
-| FOOT-02 | Phase 4 — Closing Sections | Pending |
+| CONT-01 | Phase 4 — Closing Sections | Complete |
+| CONT-02 | Phase 4 — Closing Sections | Complete |
+| CONT-03 | Phase 4 — Closing Sections | Complete |
+| CONT-04 | Phase 4 — Closing Sections | Complete |
+| CONT-05 | Phase 4 — Closing Sections | Complete |
+| FOOT-01 | Phase 4 — Closing Sections | Complete |
+| FOOT-02 | Phase 4 — Closing Sections | Complete |
 | DSGN-01 | Phase 5 — Polish + Deploy | Pending |
 | DSGN-02 | Phase 5 — Polish + Deploy | Pending |
 | DSGN-03 | Phase 5 — Polish + Deploy | Pending |

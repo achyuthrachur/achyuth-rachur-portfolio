@@ -3,8 +3,8 @@ gsd_state_version: 1.0
 milestone: v1.0
 milestone_name: milestone
 status: planning
-stopped_at: Completed 04-closing-sections 04-01-PLAN.md
-last_updated: "2026-03-04T18:02:30.850Z"
+stopped_at: Completed 04-closing-sections 04-02-PLAN.md
+last_updated: "2026-03-04T18:05:01.554Z"
 last_activity: 2026-03-04 — Phase 3 (Content Sections) complete, human visual verification approved
 progress:
   total_phases: 5
@@ -61,6 +61,7 @@ Progress: [██████████] 100%
 | Phase 03-content-sections P03 | 2min | 1 tasks | 1 files |
 | Phase 03-content-sections P04 | 10min | 3 tasks | 1 files |
 | Phase 04-closing-sections P01 | 5min | 1 tasks | 1 files |
+| Phase 04-closing-sections P02 | 6min | 2 tasks | 2 files |
 
 ## Accumulated Context
 
@@ -98,6 +99,9 @@ Recent decisions affecting current work:
 - [Phase 03-content-sections]: Custom span badges (not shadcn Badge) for hover:shadow-amber-glow + hover:scale-[1.03] without variant overrides
 - [Phase 03-content-sections]: AnimatedList className=flex flex-col gap-2 — sidesteps block/inline layout conflict with motion.div wrappers
 - [Phase 04-closing-sections]: glareColor overridden to indigo rgba(99,102,241,0.6) in EducationSection — amber default clashes with section palette
+- [Phase 04-closing-sections]: Iconsax color managed via useState + inline color prop — Tailwind cannot target SVG fill
+- [Phase 04-closing-sections]: variant prop switches Linear->Bold on hover for tactile icon feedback (ContactSection)
+- [Phase 04-closing-sections]: Footer is pure server component — no use client, background applied by page.tsx wrapper
 
 ### Pending Todos
 
@@ -109,6 +113,6 @@ None yet.
 
 ## Session Continuity
 
-Last session: 2026-03-04T17:58:34.894Z
-Stopped at: Completed 04-closing-sections 04-01-PLAN.md
+Last session: 2026-03-04T18:05:01.483Z
+Stopped at: Completed 04-closing-sections 04-02-PLAN.md
 Resume file: None
