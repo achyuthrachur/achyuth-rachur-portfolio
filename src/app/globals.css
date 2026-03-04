@@ -205,6 +205,15 @@ nav {
    8. HERO ANIMATIONS
    ══════════════════════════════════════════════════════════════════ */
 
+/* Heading shimmer — plays once on scroll-in */
+@keyframes shimmer-once {
+  from { background-position: 200% center; }
+  to   { background-position: -200% center; }
+}
+.shimmer-active {
+  animation: shimmer-once 0.9s ease-out forwards;
+}
+
 /* Available badge pulse */
 @keyframes status-ping {
   0%   { transform: scale(1);   opacity: 1; }
