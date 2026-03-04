@@ -15,7 +15,12 @@ export function AboutSection() {
           transition: { duration: 0.6, ease: [0.16, 1, 0.3, 1] },
         })}
       >
-        <h2 className="text-3xl font-semibold text-crowe-indigo-dark font-body">About</h2>
+        <p className="text-xs font-semibold tracking-[0.2em] uppercase text-[#6366f1] font-body mb-1">
+          About
+        </p>
+        <h2 className="text-3xl font-semibold text-tint-900 dark:text-[#f6f7fa] font-body">
+          Who I Am
+        </h2>
         <motion.div
           className="h-0.5 bg-[#6366f1] rounded-full mt-2 mb-8"
           {...(prefersReduced ? {} : {
@@ -25,7 +30,7 @@ export function AboutSection() {
             transition: { delay: 0.2, duration: 0.5, ease: [0.16, 1, 0.3, 1] },
           })}
         />
-        <p className="text-lg text-tint-700 leading-relaxed max-w-2xl font-body">
+        <p className="text-lg text-tint-700 dark:text-[#94a3b8] leading-relaxed max-w-2xl font-body">
           I work at the intersection of AI and financial services risk — helping institutions
           design, govern, and validate AI systems that regulators and internal stakeholders
           can trust. At Crowe, I lead engagements where the goal isn&apos;t just to ship a

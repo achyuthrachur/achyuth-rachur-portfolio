@@ -51,13 +51,13 @@ interface SkillGroupProps {
 function SkillGroup({ title, skills }: SkillGroupProps) {
   return (
     <div>
-      <h3 className="text-lg font-semibold text-crowe-indigo-dark font-body">{title}</h3>
+      <h3 className="text-lg font-semibold text-tint-900 dark:text-[#f6f7fa] font-body">{title}</h3>
       <div className="h-0.5 w-8 bg-[#6366f1] mt-1 mb-4" />
       <AnimatedList className="flex flex-col gap-2" delay={80} duration={0.5}>
         {skills.map((skill) => (
           <span
             key={skill}
-            className="bg-white text-[#2d3142] border-none shadow-crowe-sm rounded-full px-3 py-1.5 text-sm font-medium cursor-default transition-all duration-200 hover:shadow-amber-glow hover:scale-[1.03] inline-block"
+            className="bg-white dark:bg-[#1e293b] text-tint-900 dark:text-[#d1d5db] border-none shadow-crowe-sm dark:shadow-none dark:border dark:border-[rgba(255,255,255,0.06)] rounded-full px-3 py-1.5 text-sm font-medium cursor-default transition-all duration-200 hover:shadow-amber-glow hover:scale-[1.03] inline-block"
           >
             {skill}
           </span>
@@ -70,7 +70,10 @@ function SkillGroup({ title, skills }: SkillGroupProps) {
 export function SkillsSection() {
   return (
     <div className="max-w-5xl mx-auto px-6 py-24">
-      <h2 className="text-3xl font-semibold text-crowe-indigo-dark font-body mb-2">Skills</h2>
+      <p className="text-xs font-semibold tracking-[0.2em] uppercase text-[#6366f1] font-body mb-1">
+        02 · Skills
+      </p>
+      <h2 className="text-3xl font-semibold text-tint-900 dark:text-[#f6f7fa] font-body mb-2">Skills</h2>
       <div className="h-0.5 w-12 bg-[#6366f1] rounded-full mb-10" />
       <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
         {SKILL_GROUPS.map((group) => (

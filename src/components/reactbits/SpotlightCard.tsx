@@ -50,7 +50,7 @@ export function SpotlightCard({
       onMouseLeave={handleMouseLeave}
       onFocus={handleFocus}
       onBlur={handleBlur}
-      className={`relative overflow-hidden rounded-xl bg-white ${className}`}
+      className={`relative overflow-hidden rounded-xl bg-white dark:bg-[#1e293b] ${className}`}
       style={{
         boxShadow:
           '0 1px 3px rgba(1,30,65,0.04), 0 6px 16px rgba(1,30,65,0.04), 0 12px 32px rgba(1,30,65,0.02)',

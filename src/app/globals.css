@@ -182,3 +182,21 @@ body {
     transition-duration: 0.01ms !important;
   }
 }
+
+/* ══════════════════════════════════════════════════════════════════
+   7. DARK MODE — class-based via .dark on <html>
+   ══════════════════════════════════════════════════════════════════ */
+@custom-variant dark (&:where(.dark, .dark *));
+
+.dark body {
+  background-color: #0d1117;
+  color: #f6f7fa;
+}
+
+/* Nav dynamic background — opacity set via --nav-opacity CSS var from JS */
+nav {
+  background-color: rgba(248, 250, 252, var(--nav-opacity, 0.85));
+}
+.dark nav {
+  background-color: rgba(13, 17, 23, var(--nav-opacity, 0.92));
+}

@@ -13,19 +13,19 @@ export default function Home() {
       <Nav />
       <HeroSection />
 
-      <section id="about" className="scroll-mt-16 bg-page">
+      <section id="about" className="scroll-mt-16 bg-page dark:bg-[#0d1117]">
         <AboutSection />
       </section>
 
-      <section id="experience" className="scroll-mt-16 bg-section">
+      <section id="experience" className="scroll-mt-16 bg-section dark:bg-[#111827]">
         <ExperienceSection />
       </section>
 
-      <section id="skills" className="scroll-mt-16 bg-section-warm">
+      <section id="skills" className="scroll-mt-16 bg-section-warm dark:bg-[#0d1117]">
         <SkillsSection />
       </section>
 
-      <section id="education" className="scroll-mt-16 bg-[#fafbfd]">
+      <section id="education" className="scroll-mt-16 bg-[#fafbfd] dark:bg-[#111827]">
         <EducationSection />
       </section>
 
