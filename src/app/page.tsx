@@ -11,7 +11,7 @@ import { CursorGlow } from '@/components/CursorGlow';
 export default function Home() {
   return (
     <main>
-      <CursorGlow color="rgba(0,117,201,0.10)" sectionIds={['hero', 'contact']} />
+      <CursorGlow color="rgba(0,117,201,0.10)" />
       <Nav />
       <HeroSection />
 

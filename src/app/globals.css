@@ -212,7 +212,7 @@ nav {
   100% { text-shadow: none; }
 }
 .shimmer-active {
-  animation: text-glow-once 2s ease-out forwards;
+  animation: text-glow-once 2s ease-in-out infinite;
 }
 
 /* Available badge pulse */

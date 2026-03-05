@@ -32,10 +32,7 @@ export function ShinyText({
 
     const observer = new IntersectionObserver(
       ([entry]) => {
-        if (entry.isIntersecting) {
-          setActive(true);
-          observer.disconnect();
-        }
+        setActive(entry.isIntersecting);
       },
       { threshold: 0.5, rootMargin: '-40px' }
     );

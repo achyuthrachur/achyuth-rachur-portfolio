@@ -6,13 +6,10 @@ import { useReducedMotion } from 'motion/react';
 interface CursorGlowProps {
   /** CSS color of the glow — defaults to indigo */
   color?: string;
-  /** Which section IDs to track (glow only shows over these) */
-  sectionIds?: string[];
 }
 
 export function CursorGlow({
   color = 'rgba(0,117,201,0.12)',
-  sectionIds = ['hero', 'contact'],
 }: CursorGlowProps) {
   const prefersReduced = useReducedMotion();
   const glowRef = useRef<HTMLDivElement>(null);
@@ -25,15 +22,10 @@ export function CursorGlow({
 
     const onMove = (e: MouseEvent) => {
       pos.current = { x: e.clientX, y: e.clientY };
-
-      // Only show when cursor is over a tracked section
-      const el = document.elementFromPoint(e.clientX, e.clientY);
-      const inSection = sectionIds.some((id) => {
-        const section = document.getElementById(id);
-        return section?.contains(el as Node) || section === el;
-      });
-      setVisible(inSection);
+      setVisible(true);
     };
+
+    const onLeave = () => setVisible(false);
 
     const tick = () => {
       if (glowRef.current) {
@@ -44,13 +36,15 @@ export function CursorGlow({
     };
 
     window.addEventListener('mousemove', onMove, { passive: true });
+    document.addEventListener('mouseleave', onLeave);
     raf.current = requestAnimationFrame(tick);
 
     return () => {
       window.removeEventListener('mousemove', onMove);
+      document.removeEventListener('mouseleave', onLeave);
       cancelAnimationFrame(raf.current);
     };
-  }, [prefersReduced, sectionIds]);
+  }, [prefersReduced]);
 
   if (prefersReduced) return null;
 

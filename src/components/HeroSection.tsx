@@ -1,6 +1,6 @@
 'use client';
 
-import { useEffect, useRef } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import { motion, useScroll, useTransform, useReducedMotion } from 'motion/react';
 import { animate } from 'animejs';
 import { ArrowDown } from 'iconsax-react';
@@ -17,6 +17,11 @@ export function HeroSection() {
   const { scrollY } = useScroll();
   const indicatorOpacity = useTransform(scrollY, [0, 100], [1, 0]);
   const prefersReduced = useReducedMotion();
+  const [nameShimmer, setNameShimmer] = useState(false);
+
+  useEffect(() => {
+    if (!prefersReduced) setNameShimmer(true);
+  }, [prefersReduced]);
 
   useEffect(() => {
     const prefersReducedRaw = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
@@ -50,7 +55,7 @@ export function HeroSection() {
         {/* Stacked display name */}
         <div className="overflow-hidden">
           <motion.p
-            className="font-display font-black text-[clamp(3.5rem,12vw,6rem)] text-[#f6f7fa] whitespace-nowrap leading-none tracking-tight"
+            className={`font-display font-black text-[clamp(3.5rem,12vw,6rem)] text-[#f6f7fa] whitespace-nowrap leading-none tracking-tight${nameShimmer ? ' shimmer-active' : ''}`}
             initial={prefersReduced ? false : { y: '100%', opacity: 0 }}
             animate={{ y: 0, opacity: 1 }}
             transition={prefersReduced ? { duration: 0 } : { duration: 0.6, ease: [0.16, 1, 0.3, 1] }}
@@ -60,7 +65,7 @@ export function HeroSection() {
         </div>
         <div className="overflow-hidden">
           <motion.p
-            className="font-display font-black text-[clamp(3.5rem,12vw,6rem)] text-[#0075C9] whitespace-nowrap leading-none tracking-tight"
+            className={`font-display font-black text-[clamp(3.5rem,12vw,6rem)] text-[#0075C9] whitespace-nowrap leading-none tracking-tight${nameShimmer ? ' shimmer-active' : ''}`}
             initial={prefersReduced ? false : { y: '100%', opacity: 0 }}
             animate={{ y: 0, opacity: 1 }}
             transition={prefersReduced ? { duration: 0 } : { delay: 0.08, duration: 0.6, ease: [0.16, 1, 0.3, 1] }}

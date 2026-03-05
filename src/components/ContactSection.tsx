@@ -90,7 +90,7 @@ export function ContactSection() {
         <p className="text-sm font-body text-slate-400 mt-3 mb-10">
           Open to new projects, conversations, and opportunities.
         </p>
-        <div className="flex flex-row gap-10 justify-center flex-wrap">
+        <div className="grid grid-cols-2 gap-x-12 gap-y-8 justify-items-center sm:flex sm:flex-row sm:gap-10 sm:justify-center">
           {CONTACTS.map((item, i) => (
             <motion.div
               key={item.label}
